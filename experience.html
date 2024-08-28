@@ -1,185 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style>
-      a {
-        color: black;
-      }
-    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js"></script>
+
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
 
-    <b>
-      <h1 style="background-color: LightBlue">Experience</h1>
-    </b>
-    <h2 style="background-color: LightBlue">
-      <div class="topnav">
-        <a href="index.html">About</a> &nbsp
-        <a href="etc.html">A Day in the Life</a> &nbsp
-        <a href="research.html">Research</a> &nbsp
-        <a href="projects.html">Projects</a> &nbsp
-        <a href="addt.html">Etc</a> &nbsp
-        <a href="contact.html">Contact</a> &nbsp
-      </div>
-    </h2>
-    <br />
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/style.css" />
 
-    <img src=
-    data:image/png;base64,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>
-    <br />
-    <body3>
-      Going into my fourth-year, I had the pleasure of interning at
-      Microsoft as a Technical Program Manager.
-    </body3>
-    <br />
-    <br />
+    <!-- Custom Styles -->
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
 
-    <body4>
-      At Microsoft, I worked with the Client Core team as a part of the Core
-      Operating System (OS) division which is all under the Azure Edge +
-      Platform organization. Here, I deciphered how to leverage AI to improve
-      products and user experiences, collaborated on a multitude of things with
-      software developers, data analysts, and other technical program managers,
-      conducted internal user research and market research, created deliverables,
-      and presented findings. Diving deeper, I worked very closely with our data
-      intelligence and AI teams in order to create both supervised and
-      unsupervised ML models to learn which inputs and signals most directly
-      pertain to different types of users.
-    </body4>
-    <br />
-    <br />
-    <br />
-    <img
-    src=data:image/png;base64,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>
-    <br />
-    <body3>
-      I started working at Motorola Solutions as a Technical Project Manager
-      going into my third-year as a summer intern. I continued to work
-      throughout the Fall, Winter, and Spring doing a Co-Op.
-    </body3>
-    <br />
-    <br />
+      header {
+        background-color: #00a2e8;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
 
-    <body4>
-      At Motorola Solutions I mainly worked with the Base Station Radio
-      Replacement (BSRR) team in collaboration with the New York Police
-      Department (NYPD) on a widely scaled project. The project reaches over 300
-      sites around the five boroughs and is $85 million in value. Also, I
-      visited sites and managed installation of equipment for FDNY and DoITT.
-      <br />
-      Specifically, I helped in creating deliverables, managed site
-      installations of both hardware and software, automated spreadsheets,
-      created statements of work, updated existing documentation and created new
-      documentation, partook in client meetings, and created slide decks.
-    </body4>
-    <br />
-    <br />
-    <br />
+      header h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3em;
+        margin: 0;
+      }
 
-    <img
-    src=https://media-exp1.licdn.com/dms/image/C560BAQEpT9vFvX2mIQ/company-logo_200_200/0/1563042618577?e=2147483647&v=beta&t=HlNX_TItRh1tZinjxTZ4yjg1Nf447-83EyXLPltknRk>
-    <br />
-    <body3>
-      I started working at Inspirit AI going into my sophomore year and decided
-      to continue throughout the entirety of my sophomore year, and continued to
-      work at Inspirit until August of 2022.
-    </body3>
-    <br />
-    <br />
-    <body5>
-      At Inspirit AI, I was a Technical Program Manager where I could be found
-      doing any of the following tasks: orchestrate the AI program in terms of
-      handling program execution, including organizing, hosting, and managing
-      Zoom sessions; sorting and leveling students based on their previous
-      computer science experience, matching students to their best fit AI
-      project, organizing materials and student-instructor matchings,
-      communicating with instructors, students, and families; working to build a
-      strong instructor community, streamlining processes and work with the
-      Curriculum team to design new AI programs, and collaborating with the
-      Growth team to support outreach and partnerships.
-      <br />
-      I managed hundreds of instructors who are either PhD students, software
-      engineers, undergraduates, or master's students and have also leveled,
-      sorted, and managed thousands of high school students.
-    </body5>
-    <br />
-    <br />
-    <img src=
-    data:image/png;base64,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>
-    <br />
-    <body6>
-      I have the pleasure of orchestrating the
-      <a href="https://www.percentageproject.org/">Percentage Project</a> at
-      Penn which is a data collection creating statistics from the input of
-      computer science and other engineering students through an anonymous
-      survey. These statistics then get taken and are overlaid onto photos of
-      engineers with the statistic present. Then, on launch day are spread all
-      over social media to raise awareness of the microaggressions faced by
-      engineers. I am tasked with spreading awareness, distributing emails and
-      campaign information, running the photoshoot, creating the survey, and
-      more!
-    </body6>
-    <br />
-    <br />
-    <br />
-    <img src=
-    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUEAAACdCAMAAAAdWzrjAAABI1BMVEX///8dJ1iZGx4AAEgAAEoAAEcAEE3y8/cbJVfZ2+KNHCaVGh2ztsQAAEUAEU4VIVWqrbwADU0KGVEACkwRHVNMU3cGF1CBhZwAC0yIEyLm5+zU1d3t7vL4+PrIytUIGFGIj6QlLl2anKx3e5SdGhqusb8AAD8zPGjP0NlfZIMsNF+hpLUAADfAws1JETxBSHBxdZFTWXoAADxnbIhFTHGcEBCHi6BbYYAAADJjWXJ9ABJWH0Y6QmuRHCOOCxZIH0pPO2BkACNXEzxbADF8doxhABdgRmKZAABqZX9MADF5CyVECT5WR2hjKElQMVJvJj9+JTdNABVtACV+AAhfFzmLAAh1ABllLk10Y3lUK05UACBnT2p6GSxpDzFMQmJZJkYAACdNX6OxAAAgAElEQVR4nO19C4OrxpFuY0BAzBsEY15CMJKQOETSoEGJIztxNpvX+jjZdezc3Fzv7v//Fbe7eTUPjUZzZo7nOKeS45EQNN0f1dVV1VUFAC9JgpgNKEkcj3vRu7534l6EfNT07hdLVqtJakie7+3M/7HH/WzkvqFfgJY2btwJcpnCxCthismO9zyj6wa7S37kkT8XCezPnp+++HlYt68yFYIt03HZlOYpkzkKP8aAn50E9tNPnp1uWwTBUekjCCmg4FFTit73aF+CXhzB7GYEQeCdTHjQWL/n0b4ENQjefvnl7e0nt/fwTxeN21v4w33vaO8UeAY6D7XQR9CZjSEI/DniTfn4fkf7EoQRRAj9uih+89VnX/2msH/95f1tjdftl7/9tx/C3/37P9Pf/+EPYyBC4O7/7Y/RH//02Z//43fR13+Gl952EOTm/BiCQNAQshP7vY72JQgh+MXbt98UaITCHgl3v/jm7dsvMD6ffvlHwAXwB/j/dfj29rYLHvz3l7e/wisCV6SoOfHrt2//eksiCFbjCILQQhBK2fsZ58sRRPD2czVYlN8qjlCT9DOM0ddzB2RhXBRxBGH63X/+uYXw9suvfvuzT+5/6e/Ka7JSO+EK51ddBE8KRnCgRnMsglbZvuTo3gchBP89ESoE4/KP6gQIq9vfetnODjD3cIud64PgLw2Enxc+hPl+B7oIeiH45r6D4BQjyA9vvTMREzLBSw3tPRFE8MsC9BEUgA2h+jxtjiCK4Nf/rleU+18C8PX97a/BEMHkh/shgvPhrUUsCc3d8w/qvRLiwW+4AYLe7+F68A38GDntuVkIAvWvJYSfwyv+4/b2v8QhgsVnIzw4gqBjlKv0s4/p/RJC8NtsgKD4+SeffKvCj64I/+NUy0CWAu/n91gKfgsn389vESv2EfR/NTaLRxDkKB6vJR+4iYzW4s9HEPzsk9u3SPhn+zhS01AV7RB+VUUQ/IAk5N/WDprF4wjePg5BcMIIMh+4cYfX4lEE73P0894DzhRyoQCVHPg9dP3/hPP7H3jU4RfviKDyk0bw9lt0DGtrSWm/RiH8Gyf2Z7fflacH399+5MGHEIQSsFTi/G0tB12oMrp/v/02cf8PVB29t49HcKhRA48v5eBLDOs9EkLw+2CAYPb97e0/HGDO4cCT2PNLKL0c4hb/7f72+Jc/fJcC7u+393+sERRLvQ6uxb8eW0lGEBSw44unXmpo74mQPhgDQQS+FxQnfVsknA8WAtjd3kKMFLQS7+zf/98//TPy8OlwWodf3f+/20/+EEMevP85BxH0fSE98vNcdHzfD0H218chmGLvq963jJ1EXCwyd3SF9gQ3yZpZ77mZmIzKAB+eCFtpvrpiqmbO2JnvTogH/wkEgzdnjGyZlszoJi87/i9v73+DGQ/+53f3t7f33/0thl3wYwhk9o/vbr/7kwuS729/SMCBN03DmOk6bMA09RCkY/rgCIIbPIlplzzmRBtjuVxKkqF0ndhZuNuvKNPS6NqrmO1140Zj5HnodQZk54cNb05YzTDLe7prxdDkiWFtX8T8KfVB4EHiuOwUcBz6CMTPoXSEP/t2AsT/wkr07Xe/RQoNmrScahfw2f8ScuIvAYcv9Y62j6/1x/XBIYIii02SPXGIsxmWztMsU2Nd0+k9wV/TNxKj8EiDtDCCyYE2FXgA2ouWnnaalVgLPxseiSDgrFkdnwhtcHr/AptcSB/8LFb7FP/sk9vfq2JYcCD6qnF1fferiGtZJvweatT/Pbg0/Z9HrSQO1qd5hphbgSnLYXWeH8m8aZDQCOIGaz8YwZCZyJvDdq6ZuJGOJPDd2GoQzGTZoLbT1awUGdTzT2WE4Kc/+6xPP/sUmr6/gUpg9vXnhEvr9svf2tXkcvLv0Q/DSz/74pNHIMit8GFWbA9FtEK6GVyTp9gONA5mJYTgkTZs7IhLjgY6xhTd1nOzQjCimX2GGM+JZHRDZegjeld6yMv/6d+/efv9fc9lff/n//ljEdlf/3B/3mt9GcFgjsaoMIR3MGSoG5E8J2F4yuhAs1ZKBKfstuGlciuL7e784a0FqIPajKzWxxz8zPT8HcAapQf3SZDrfuTg/f139w/gN4YgpZDi3t0h36DCHAhBpzK82RudrUNoFsSBUEcYFHuWPDFCLh5l2rnSoRGCm5hRiHWqZGGms3I9A734TlOFIE9NQzFwnSRYxKsbk1Is40RynAMxZXuaiQPFGW8S0C+wMDONLtIHdAO6c62PVyleVzpHVXS5/tzeNIH94tNnpxEEKYaVpCX8n8TSUAcxpmGXF/YQ1EO/c3t4qUXM48qjuO+ehYGxQvIQVyKodR+Jz6C123waUGdJYKzJ85NGjKfiQTcQ1dS217uiSMWBvpwxtZpCUmR1JShGkJ/3FgOBHUzjEkFZ7J5YcuvNM9vhgp4Iz085wThnNer+2IyBwitOuoILIzgA2mMG2wgYwVIfJAkv0cPbvBsJ5qMdnN7jt9XiKxHEJrIx0NUwYu1qegZBDq/GdOfQOIJoaXoBBB+rIDmbzrr4IF2LIJqulBIXXQrX0JpQjMch2HHxvEoEHUqhGPXyeZiuRXCPz9msenTaQlq1hskHjaDDY50hvXwmoisRxHENPHVRnnzICApmpZM8DsIrEfQm2OC9aLN+wAgKsxJAiqcfFbF2LYJ4wPJPGEFX5qmamMdAeC2CNG75oqL2wSKYaKW/rYKwuHjB0xDU+grwgD5UBAMEIK/fyJaGPUT05Yi1axHEGAxtkj59oAhmyJo0zSJwPCE93MAvbHzhkqvXYszffdfMkD5MBDPkwpSPtYckQn3TLkF4rT6IDVZKu9TZDxJBEXHgjOCODMks7UIA9LUI4qFR7KWxfYgILsqukIcKZIHJD0N4LYIBXkrMS6z9ASKY4pEZHZeCjwOj5f25axBdiyDAbVL6BY3ww0MwLaMKeu6bMvbUeghCEsHTmTjqDqk4lnA2yoRc46V+nQjq5xGMmHKbtbsHUfqE4Ui250EhEcQb6/wlk22L1xJ2JFWM2zSXYi//YxD0H0LwmWPfBe0sgmGZ0EUpPZlX5tjAOXc4C2EeNh8dvEhQxoU0OlfCQG+8/g/ciWmO4fD/Wdg/Y4ggVtHPICg/1sH0SHKYQZ8rKioAB/sXiyrbkNJX5yBct3xS7m1cVpdLiaHMe93xVkS+RIy3SPtZPJWHlWTyBMvvWZ/v8fXdHZV3J086g2DBUjVZY3IQL56nMwy8b104ZV4dxa8u9SSkSwg7O1ACLxEsUy5K/a0iF8vQG3JyLrCz56Yv8XBqy+AJvCu9GRdQcQsgpXV80xzVuhnMPstUtGlM3HI1R5PnojmdahggyW7a5EKWJQAUSoEw6dnP5RPtSOtqj7q32AXlrNKeeSmRRnegY6MFsCdQbIv4SRkKLkRy2agX7OTmVPl4Kf7MpbALw6JidKYTFHO2Ffu+IJYqD1zXI4FrjmbHqj/6Pijbd7K1Xk2efXNL30lCpbpeD5PnDJ+Zj3lEco0iSScYX2Q7PynmSGe4cv87Rznu7Q4ovXxzyW5TN4zOwyEatCTRDG3EjZSY/uJOMqqWbqS7Nwz+pfjF3ZKubqExy7v/zUD6v+2hCTqEJ5AAT5Ru6p5IyzdjUclPpHxExOcTqkvWvma1UOO7PynU0K0nyPj0ZCH26KIi4QexKTHGjcEy0ikkc1n6TeGjbu8OCw84/UO4Eb9/+TPO5GjoETnKVJ8UxnY9z0nnMj/8aQBhsHmXHnFJkGXBhxOfng2iIPbWAEAkPBhDZob4oZ/M/mijn0Da8OPJedPVVfzDGIAYqTPHKZ7urUbrn0T6/2PJpzrWgn/QEVdZlnkWMAI6ZWbpCrLZuhaH8lOp4/E4IiwwZEPpFG+c4jCKV/01Y0CWsi6iYiqbUIkjJbNz956H8COTShht/smkTKXSb0TT7ACmdKUgLxXlAi3sDYrXiGVW7bkifurkSI3S4G0ggNNGLnIHEkJrrRoEhPysxSxiIZ6tXnl4ZGTDT4ao2mjz5nA+UoSRUeVtYUKemIjQpmnS1NvNKMqoIfTYF8p9ebUUVZPOQQVMut4ztVGtzRNizfCmmdIdmxP7rWsTdlE5EcLTdA9peqhpOp3mH3pG+yg5d5jtUHBWP+Pcr1UYZVPaV4293NsVKpAlWsUlTatJzAmxoSjmqbBLKvIpo908sZNe9uIqdvB0DWKK1DdBwckCPT/7uvRNtW672lXQ2xwIMHOyqCHnTfvTXqF00ifj58bTuugYjHQxpOHdaEqzT54gIoU8R2XCUNj9qdyGVJRWspXV3Piec9Uta0MhCG3CIFnIXQSB80QeDGVKOT3t0kdSAFfDyZMFOJO5JYADF3qMEOyabdjo4zc9BMvZzTOhT+51ZEYPQfBEey+lByH8z0yuxPP6OX/9RYpWletsEHmBXJW83DHa/CnebejeLKvdYdaB3BMIBgg+sY/+dDmwvp+ZwqX09B0Uv9VajA5veahCW9+ni9Tunt+6jJLH1LFOhgg+mZ7MHo8m7l2KjkSNP0vuOAXQ5hgzcOp5GwVOY/KI0Hhku9tSz4jga6fGj8DrxGRxoQZNjyyBHq9QckgcOCgND3dUgn8hBBdMw0TtZplL8Tw7Khsck+dvWm7dNQ4xs7u3/C+EIMFFvFZulnk2NIPPBe8LGoRwjbH2s1UDYCfhGvxrIegSJu+MOcTxgYFL7vm482TCUya9yeO1bjTgU5Owe1Yfwar8lOtmaRHjKgSiHYf9lSoo4jiOoghvc8BH6LjBIrJzLF6cJFPDGHcLnmaL/cRv0c7zQa1mIdrlsVo/XMFNxKiIcXNZbONuuEmWhjFeHT18B6yTJOFuFwr9tnJ4BzvCRO7kAJvYHOEVE2c/3DzAP0GZKKkrhL9moPT2ETxgKelPN5KssykKVFiytMxsyY6IChsGQaRp1oSVJAka2emBYi29jF0oTgz84YhKCixpVjP4zjqXMns1EHeSSWoKwlSJsiyipF1pLOUni5VnyMRx9oyu00cfuPsVK1sGtkmyg8lY+hL+elhqDCMzpJnmHZeHRSLuWcvSWJq+IxcJf9OyUkU3D8bziXT/fGqw99xD0GmyDFMZxa9MFVUQ1LmiGK2uYkulAeTMeT0Mi7K0JrK7a5+HwPNKDrW3SHCCvcwTQSH+sfoizKXWQFtIlY4bs02VBWgoaCJkAlTToqohCTXaxqSFIo0FmRQLjhDJvNbqyA5Pl+dEhjKNiqLoCC2X6fmk5QtxzSrdu4DMiW0QVPIkqEjdNAhCRdMsDuUwuZNiNqZKytTaU6BZrRB2mdZrtFeUo10FdMUznm/M8K1UX+CyTXmBhdToV1O9TveGzU2yyIjEcGVUbjofPrEaQVWmrJQutYrEoJia03xer0t27s1+ki4AHe8fJOuiARYxnQtGzC6IICW/qWmpazWCKA+sCWjPbpq8Tk9uJcFWsRrWdOgWwbVC6U0GmUFptbZQaK1jaW1WxqXDtP66zNArVcGDRjCV4zay2qF+UBoEFxO4JtZdjfWmS7bcRJwk7FiyfB0sUS4njzBDOxCOWZUQQTMGfklcsKcJBAkPI8NPKhgiubXMI6tV77sI8q2nY2fWRTQFhiiflMqVXnXU2+oePkNVugJEcFBrqYtgm9wianWlAsimTd4VHAA7tGHKGtElPRAcSBAR4DUaIdiXgxKBoNzOUYqvg+OmCtH1SQtyF0Ei/Cqy6lq4sU5EBia0guM6HI1c3RS+SrWFCGp9U6uLYBtMB6WbXK7HAkPEjU2VsWBYYVZLttIlfZnsxmk9mjnbX4uP4wjO+VlRf2qj2AKjDZnrIdhK6Miq4+Shkn+a1nTiKR4xDqrt1Ryc8tSsvClCcFhC4ByCVFWvITMIB/Rekcd05aBaX5XVYw35+uUPxmii01mN+hyCPLHpBzvcxAf1EGwtH4hgOSrHgKu7TxI6ujMhi/YPPhOCk9GEdRUvyAr1eE/IGhsk8rh792oEp8STXchnZ/EIgokxFt8L1+0xx+zTEBRYymqE6ok/k/6CgqdJl/RlQu5C68wO8dUIRnKbVLIzJ2dWkjMIjkQaH5TR6ptPQxBs+JtaDDkWz4wNDBK0hmdX+TJ9eOvpGal5NYKezst1u3OiSNZlBN2bsYwepPmMsMMTEUzpWaNmToyzFm+xvHJLh2MHpXZquhpBsGDrcOFoQtQxu4ygb4yVti5mo9kPT0QQ7LX6ecwfSkmKxrI6zpN/OK/4XI8gWNClQ01kyD39ywiiDYlhTS2kkI6I6Kci6O9YHPYM7ccH3yeg3l3BhV4/3pukEQRPuGvnEQSerRyK4nTXeQnRQ9pMhWDGjOXXQttHG07jpyIIxW1uxqFNKxcCW7LlowMABfkh94Oo9RHMyvSwBxAEXDyz1ayrDfQQbBeuFkFwMDvxTwGGSO3i6pefr0RwQjzMjJ+monBRW3aZi0nYVXtvHsQ6snqTyFPKr55OmlUm337x4jHd3GHaIe8VvtVQCp2y6nNMhWcaAZRRlS8LWmjN4/FXZdsIlR6C/olvugr18FYgwEXeaL6I8vqReoqzOT3mTPvuwdhyf4Mqp7YP0FHnTFUM3CD2pDy6TcBNZoexLB+0dV+BDK1Tvp2Y0Pho4rgF3uIrowOqRfUpOcNrecnRLl/9msoDu9gh9vTXJqEZhbN2Fz2/ZpWNlxcD753T6iGYk5BiZFnWloyBibm7kwwJDVctdE2W2X0Kn62/KHhDlulThNhHMJShMp+kNjORJ1KeOiCIDrQsG2aIK7ZHWxbeQC8qV7W/02R6Ey4WhUHUrF3MWY3ZqVk6LWuWOmoMm5OlXdqG/aWheQN7dICdcKI1bBTeLYJNCOFxeXNzs1xjb3QsXbVlsVheqEiRSQ87ELN0UOUWEm66+gUjmNZf0BPbWfyIh6c5BSJYNbNAYIj1cbWWS0401Rl6HnfMBV/cURprHNKqLnnTXDM7nOZQAIS62ynsiVO/OFNEX7TZdZs+wuYhFvPja/XGx9BBUQ7Zy2+uP40EGorUy4sISfb5NTngHyUor6WI4RWDmtovH+v2BPI3JjVjV8foimcc8PPRtDtvd/dCCQ82PeN5RddoehoGr40ZvS2jQMvHMlgzjx7JjL693A3XxpQ5vFigrxDqmjZTeEqxGCV/bfHEwVozZF3heVNmNo8MFxcOd70zA0V/wWBIYZeLWbHeMBOT53X6db3Ozo9ORaDGe5OxIIrn/QE9ymQy/9Pd30Uv92YlP6/YzncWuaUp/IhJ9uORSFXKPudGW8Y65xUdodRk1HIuB9ul/YKvwBa69Q3Fk269oqCRuFOS3gknvPFoSe0vZCYWvIhahi/JE95gi3pqvZ7Xy4Zvej6rwLqqwHqQM3fTxcu+Ga0YRJsL0qtJn/Asvj/6nXQdP3Evrlxsb/rLm//mmWubPJ0EetKXX8XjS1G/J9oPKl9kzKvpo0APNumn4Y/RkYcopZVVxxjxXlJvupY2yqS7rKUXK8C8f5paCh03yr6/YB5dQ/w9UEDz1qz15wjrl03PeBr5R9a0mFVup2larJnt67KOA31iTuQt6l20O7GvNIM1WPMMS7PSUprvXl+mfDqVaYaWlktz/2pWuCF5grhYLALn1SwhHfKEbCEGzgtaFR/pI32kj/SR/oXp3exe70Ncnp5xvffF4yHfHQ5FwGXYkMrCKmsnVEfU2v2h69YR8v1uvYoz5EgRoprEka3fxIU0tgGSRYT65wfovATSQG9w0ny63R5TwiuS1Ce7YzygRnVfi/0iw6eVZ4ui3ZYWSqLjdDuNiWyotg9u3Yey90nZUSFpPgIUzLArA4JSqMtiS8p3qYmUOo6wON3t+xi6UjdaRpzjM9Ilznx3pgYTO44TxMtj/8okXzIMuxjhV4v0mfvBXmJ0VUwLRduRbbhHKXI433dCqd1DSewlswyhoXC8Ow0MBc5iausrpO9OcRzbc1rawb+5ztblbxfzFXr5Mpes25eH+MFBYkwVGkdz6VhuNgS7O4aRqjeXCgfpjV3vS+dvGgPeO9W2aGRVUXAF008xLsxOWUznrhpkVB4NDD0sxzsZlpdY8YMoeoyC1I2x8swqvCiiiTiaYtnEInAnqUVrqpQ5986JPvX4UGSbNI2w+m1tVpUk05IHvW27qxuw83YfXq/6IDJs5VNQmTYmNls2HcuXxJNzagTFSR0oPDV7Rau3IhkdCYqmknGJoEdXCIJUG3hxY320+rBdWN3Y+LlZBWgVFlu3sZOIaGP/1NbmiKyq3rU303sByevQqmOWiqqdBkGAudOZS8TWbcBozdRs+rCY1FnCud5EQMWN+zxiO06GsDo3MGoEM+2m4yNJbN8ky5cfGgTLtw9zbI2gr+t9L31hjdUQ9ymwMjtBjae6945cv+81ZMiXeAKBaaZcKtcVwyOrO2G4FeDr65vwuQZBzG6r7ksGwknz4rxN3QewVaoYO45StLITDlOPw2PYzj2FihVcukZQ0LpBgFAQHE25/X7qzfIWQbA3++XkC2s2gmAQg2LWqTa1rZnJnyulH05ge7VcdnodoNUimPROEkNg672q5S2CiMJJ942r8KnXHNUiCNuoThKZ6oFMmzlcWL2g9Op2SYvgTbdXKx+IGpHRk+vzzn4BgeDR1B+F4C4ArtGZxg2CXB0nl5u9ejCuUee2tQgKTLevcBVMDK3rSOkgCAVub9u30GsR1SIIRUEtSvYmZpisucrfmOMpiC2CqtzZ+E5iVPieqI4kMopJBksRCJ6UfjLCOIIo01DpDKVBUJDLqHlPV3o+YX/DV/KjRTC70cjn4K0QE5td2dhBcKH1kyjgQliNrUUwN5tMEsdSTB/4GhHkeqbMeovgVu5IqBhJ2qNJvKDvZPIGERzSIijQk/5+7yiCwQ7/Qr4td2tWeOZM+QqFzOiXtALHOretRXCtz0hZKaKOxHr3vQodBNdmPz+Oa9LnGgQ9xWr3YVPUkbiFXZXPlMyHCJaLUrzshGn5mKsWGiH8HEWndL5RXBoEuZMxyM8bRXCH2nIZslTL1sQRpdzublc2EVqDRLZYr65I5SruOWO7+hNO5AvYSWcadxCU+7UhUJAsWz6FBsEduyE6vTWtkCgWE51H0IqyLEvn8+5mRYA5gVPI/FpuTfM8k1docayyTzzOjRjZHthNYwj65UJ3MolpulXmth0faLl+ULYu93dNbL3aPktlRoAmmlMw0472xJUyZNYVVB0EpcG7Gv1VHY69wfPAd49aZxyCxZPZ/FCVOoegGUf2aWkeuvqbvY7UxULd8J333aKSo1aVeI4QjGzbDsfi7MYQDI4etGG8nUmsxpAHoUWUhApTGR+2PsibIxBUVtOVyWo9kS7ucMNHsxOe0UOw/woJiGA1+za8sl9TMnvTswGmCvm25FRuo+2F/LDdbk/bEH2pZrGomVTnFrN1voY0VbrJQt7R4M1NTx8coTEEbUNGpPPEw6xmMfCPRimoitkIgpUMxzwIhKkld7d01xpu2OQ7eZgdBA1qMItXfCUTylks6orVFZVTk1wfM4N8/TR3Muvc7HolUQ2zU4ysFqlMP00+pSkNI3A1grqAWMXx5kq7ZG2bKb01sYoraoP0qNysLESIIB7zXu+8FJObO5gHnU1nNe4guFf6ZpNv1dOrukyYKd2Z3kXQm1CkRhlZdaJFsxbnOhmMsasfx07vv4Mm00p941oEg3ruhcRq3CKYafhZOXJfcYO6klS2VSPIUTxNDEasOdKekRB0EEzlPmu7TF25qQZeZLr6UBdBqJeQEeqqXGfVNQj6itIqP35rWLP1atwgYutYOb8WwV0tDgRiNW4R9Ojy1cZTs3elc1OvEDWCIGNImJuU+oQhV+MOgs6kV+kKrq1sxUTtWjzrFH/qISiwPJFAGhhVlRA4a2p9UDTaMh5BM3W5xt5s1LSExYrUlQj6VvORWI1bBAFb1vRLekoJZNma4RoEwc5qNWquHWenEEnXqostptuh1kBvEIR2Ealm9hBEBnvbfNIi2Phm4DxuXqYet8tHbrLlhyZHS6Dx43w8gglW11oeCK1GotQrCcqpq16vHdMdo8RrfE4EgtCKbtZdsV1W4OxouaSLoK93X9+zMJqKJK34zGidCG3sIwgKpq2SkGk1gqnc+HE4s36Ri088r0yrTrir3UGLMg/KYQZRTi3FOoEgxi5vdWC3tcA3jQ0HJVXV3LGTU3SkW/eS1QCUtfywbb3ewQ2hjq/NG1KCuxpDuMcdpQ3W2bQiYa0zbTcHCIKFLk3rWWDWzeVma0WJdFX8w5bbe7u1zJEqjcqzqpJKsnL+BSUbwgZw0XP1yDdFmUq1PHEKX+WHOabcGDY5ERW/u2uNvNxsEw3hPC6FqUu8PozjCaN6q9x0llaBePm0t2Fbb7PJU81nhW+cXsho6Q+Lizb0Xs0Ccc/eLDGCQc7oOpPXD2d3oykRCKbMTSOdFytLNw4oqpWJTkXiCWnJP45N67oxPRO2lkq6fFrgIlJiJMGnLZwI/2bC6EyM4PILRqdjx/cFlTbylmlV5liOwz2ZInHZTG6qk/hzWUJ+ymQutUqgaOh0bVekjM7GHTWC27FVdL1KTxswfRv2pqhPFCVZqSRYCI+Hw00qIQvjOA7TzC39zA6mtmwTJNA5VJ6AQtXQa6lEO642f7jyh/H42CJGtb3jmjyoxMOvNWMtduhHuDR7cYxP2+12hdhpyVf309jOT0dCRQ5xo42alcR2bIMMthXX0jvCze1cjEv5ubt6CMVpDW93itv5XPehhgpaWTv00Jzq+GtLF7qCfI57p6Kz55t9ncFOH+kjfaSP9JE+Ukn+YjzN8vJ7EJ+dXsOS6ajku4QWSaDaF9WbRWkYZvt0QVYYFodpW954W+5VCV7cuYQrT3TT0TDw8cB/tz2c7hdZ+jg1brStaE14Eok8AwcjY18MnM8qAO44aNO3lwfDyjTF+LZBapwDZYzUc6Y1sgbGbuCPlvW2psYAAAViSURBVPwLHbExBP2lD62zR3XCHGtLJLcsiXCsciPOv/hsamZDYS+7dgg9BIdbSzX5QU762B7Keo0eGmU/tOhB4o6ws8035I+NL6WBeGfrH2Skm7VFUGgjFvwg84GwAGUEYZIJwM8Ef8GBAFm/JIJKgE9HrycNYkHF1lKGXh8cWmLiL1DjWRL4ICAqTiQe3uaHRxzYZL5BPyUJlKLOwnNVrryrtwiQ8asGQMSNoHcnuSIQCSs7LF9UwgUZencsyPBGaRagjnMLR8ClzxNRXZQzbpWhG1YmnASHccqAgy4NRHyLIEjgeIIMvXSWC2A3/FOeeS4234IMfhWrJgkEMyQD925QBfGJjc+CCwGY+j6jeirkKygY4wCkU9F2AiFZEQhm2Rr12tlDZhFBAE36vQoc+LDDDHDIk2dHwIctRELkgfaJR763hF2J4F32AXARmrkLBNjKHt5iLnppDpcrbgdlHJppEWxh74HMBr6kchExp4s3kH+9EPhT4EkiBxsUUqDCjsM77wVnDm+qArXi8ewXKeDq/e5lIIQRwhyKZIcV0xTEqIINchHnDuyGL8gOuiMAmgcWkBf3Dij2jlOVvK4QDAQXjvIYAaGsjSNiHhR3KUhtN1knQEfhFEBYCW4aAbGao7APDYKCc0KPCPlaOQ3PYmcOcvRtBjjknIoiEOEVOpq209GPRRW9CjCNsNB1YW/QP3DMAHogGw9wDFpl0R1Rz6AcXKCxrByg+cAha4EGkx0oYGf3DkLN2wBHR7db4TuDqQCODuDK0boLgcmaoC3J8RAXBvBSn0N71CiABc6eveDaGR5CGIIAYQ9lKnp7fZajpwGqFaSdxVBMolls4wlfhk/6kgNyvML5M7TfB5Ly7AW6hbdwNw45i70lvGaVIAe9jz3MOkA5mT7dIFhtfaRGw4Mo8jdYdRDELUKmqBD0IBxZFrYI4ji8fQLkHoLwTK6MKoWgA2eD9jkhK8O/EbzdQUBxKW7JtCskphqRK2EhXSbccij4DAeFgLRkE4QgfH4Vgj5yAborkC76CHpqMCsRTMubFFOMmwfUnEDQKV2p2FEOeXkLuTtuEAQqXJUKOD5nhjfakh1A71XwVuVGFBxHiNt2UEsVIW+UD6fnAnYwT+CYkWsQHju4YA1l3wojCOc0ug3KMl7Y5eoP0UQItssgUhrWfoh745cIQk6PBQJBPwzSckVD7uIFW3uySgRPJfjovW8J7l6yaRCEg8KzGPIgivNQwyGCHrzBvESw9pVGuetlv/DQC8mdzHPgTV2IkgpZOwAh8pgXtriBE7MchHCHOQMOYCd4sN/JlnMiVDRMcGIXve4vADmUXdNUEH1bcOCQcNyGi13vcxtwG1Xcwgt40YW987IIv+fTMwKQLTlvk4UnyEM2vDMSrIEXLYDDwMcHn3BaesTXrgdFl79PnYAT4NTJGB+K9tR3oIq1RvCr5fYLJpFOxSCtXKPiHXYhOqtMgGPE2ylx7MDJUeygrIcKBoc2wx24xqFXMAiFJ6BRwn9Vzb3YDLIgdIo426RgnXrt+uYLSVC+jwEuWhzUhzkkLjzkS/U8HFvOQWUHyxB0BJ3qO/h0Hx8oH3H5zRe4UqNGX318bopYqbwK/eI7PtKWfeSbxY2ho+gfagj+gppxvKoRfAHn49+cLRbcvic49f04dAnsF1d9rlrK7SZbwEOfKnevV6v66HvlDXQED1RjzbNSi4d9wmMqe8/B9bgeoVc6mCEccHZVeLwPEp4rT33Esz5Onh2v5teo75jy11UdiKBrKoo8RGc2DoYkYLFxdaGa/PXlM/9YlKCIQ+Hq/PjDK6rp8GNTtgtH8qkuEJc8ZbL8fyl4EufP3AKqAAAAAElFTkSuQmCC
-    >
-    <br />
-    <body6>
-      I created the robotics and Arduino curriculum and then executed teaching
-      it at the four week summer program in coalition with Penn's GRASP Lab.
-      Unite - Summer Mentorship Program (SMP) is an engineering summer program
-      for high school students who are either an underrepresented minority,
-      female, ESL, Free or Reduced Lunch, 1st Generation College Bound, and/or
-      Receive Special Education. I served as the lead instructor along with
-      another Master's student at Penn and we had two Master's students as our
-      assistants.
-    </body6>
-    <br />
-    <br />
-    <a
-      href="https://lh3.googleusercontent.com/HQoou_JO6f7BVVidjLSsMrG0AzCJRHfJxXVb55QpPW7AQqeIIiMgllbd1NGhdikuMQekO689lagfEuIsXsnbsNKXD0e1Qlvt70w-patm8zEbLoc5Cq0r4o6DQBnI8KYUEesHQ91IxQ=w2400?source=screenshot.guru"
-    >
-      <img
-        src="https://lh3.googleusercontent.com/HQoou_JO6f7BVVidjLSsMrG0AzCJRHfJxXVb55QpPW7AQqeIIiMgllbd1NGhdikuMQekO689lagfEuIsXsnbsNKXD0e1Qlvt70w-patm8zEbLoc5Cq0r4o6DQBnI8KYUEesHQ91IxQ=w438-h78-p-k"
-        width="30%"
-        height="50%"
-      />
-    </a>
-    <br />
-    <br />
-    <body7>
-      I wrote and received grants from the National Center for Women &
-      Informational Technology (NCWIT) totaling in $6,600 in order for girls
-      from Title I schools to gain exposure to STEM concepts and job
-      opportunities for women in the STEM workforce by learning about Robotics,
-      Scratch, MIT App Inventor, and the Internet of Things.
-      <br />
-      Going into my freshman year of college COVID hit, so we had to create a
-      different, more virtual approach. We came up with the idea of "Camp in a
-      Backpack" and held camp remote where the girls joined via Zoom and were
-      given a backpack including all of the necessary materials, technology, and
-      supplies in order to be successful throughout the week-long camp.
-    </body7>
-    <br />
-    <br />
-    <img
-      src="https://1000logos.net/wp-content/uploads/2021/04/Chick-fil-A-logo.png"
-      width="25%"
-      height="30%"
-    />
-    <br />
-    <body7>
-      I worked in every area of operation: catering, marketing, drive-thru, and
-      frontline.
-    </body7>
+      nav {
+        margin-top: 15px;
+        background-color: #007bbd;
+        padding: 15px 0;
+        text-align: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      nav a:visited nav a.active {
+        color: #fff; 
+      }
+      nav a.active {
+        text-decoration: underline; 
+        color: gray; 
+      }
+      nav a:hover {
+        color: #fff;
+        text-decoration: underline; 
+      }
+
+      .content {
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        background: #fff;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+
+      .content img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 10px;
+      }
+
+      .content h2 {
+        font-family: "Playfair Display", serif;
+        text-align: center;
+        font-size: 2em;
+        margin-top: 0;
+      }
+
+      .content p {
+        font-size: 1.2em;
+        margin: 20px 0;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #00a2e8;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+    </style>
   </head>
+  <body>
+    <header>
+      <h1>Christa E. Simaan</h1>
+    </header>
+
+    <nav>
+      <div class="topnav">
+        <a href="index.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="etc.html">A Day in the Life</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="addt.html">Etc</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <img src=
+      data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAllBMVEX////vSSN9wUIAp+D3uhZzcnNvbm8Aod73tgBoZ2hramv+9eT73dnl8tzuNwD96OXu9uhzvS3j8/v3vSLI5/b97MruPQR3vjTMzMwTq+Ha2dqfnp+npqfq6urT09P19fWZmZm5uLnm5uZ8e3zw8PCSkZKwr7BiYWKJiImBgIGrq6vCwsLtIgBpuRIAnN32sQD//PdZWFl2RogbAAAGhElEQVR4nO2aaXujNhRGaVOUiLbTpqvLYnaD7Vk6///PVbpakDCZYDu2+sy858NMEEjooO1KSRQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAwHp+OgfK8fM5BLaTvH+3nve/iAy/fnhez4fQeoJ3363nHRk+f7+e59B6EQxhCEMY3gMYwhCG4YEhDGEYHhjCEIbhgSEMYRgeGMIQhuGBIQxhGB4YwhCG4YEhDGEYHhjCEIbh+foN3/+1Hv13bX+v5//wd20AgPA8/LOeh99Ehh+ffl/PU2g9wePDeh6V4Q/rgeE9gCEMYRgeGMIQhuGBIQxhGB4YwhCG4YEhDGEYHhjCEIbhgSEMYRgeGMIQhuGBIQxhGB4YwhCG4fn6DT8+rucjGX56Ws+n0HqCP85BZvj3z3MIrQcAAAAAAMA3TLPr92O1udPbiuJOL7J0I2csjpPxumKaWtGc3Cn1HTIrW87j+zo2XOgJ2JWGm4FJFj7UjtOdIZUXe/E2xq571Zkkyo9dbagKink3v8P0DWnYDfTjaUPfjgMjv0Nd7VXCpS83hmw3u7HljmFJhsM9uynVa2+uml37ubysIGMYz7tg77ZhlPHrh/xZNNy+W3QhLsYkv9aQb730jseuYVS37byVb8pW1ovri4J0r27D3kvfMd/w3lC9En3xNoazElj8NRmyfJSNWM+Tj+xLhl3TLMw8bjXKomlOpmjKeJJ6Uljq9lIaMnyeZyXKULWkkzwy+dGm0V5nguN0/9hzot3Jyjbybib+F6mDHq5pFqtHeiebeF9/klrWe13YQVmWVZbTRMdyKjir6IJ+PL9HkWEWcb+1ZLfwUrNERAW59eOJ6cWJHL5bCg5k9CBrJZ9o9tw8wZLERpadTWaDSTsMdqCwoaIkGYWY9Z6wF/z8IFUbZrJulU2Vy61Qcwxt3QWjmWdjnYkmvliFBfTUZohduM7Z2Q9jO13ZJu6TLJbdnMcvkVxs2PhjWXfaZcM9U00j+pVoWWvY9hTZyae0ID2hdHZTTsYTmVEbxqowKkspyvjiBm0YtbJGtZMoLxYNM6o0HzdF12zGwRqKyvG2Godcx3hJe2y65thS9QYZc6WchpMYud1m/EyFqbiCH9KuSzNqOlmZLD+ooXfIJYdMDUp5dfE4jI7uXLPXDbpkSK09xQdpbg1jRo+mqtp21NIXofC5lumtTqYCUtUf9dSqrlRs+MZzqTB05xopQb1vybBfWEKUoQnMqT5OADFSDmGR+4PdFmbXDoqF2cEW+WYxDRnS6zNKy5l2WDCkGNzOOa6hziyaKvGqrVo9Oeo4KXEzDtZIsY9NT9q8vWEz9QRuXrNgqN48W+rVBzftSg3jRulmeOn4aQqAVVd0tkU0VkjlBob0/eSXpteoSWfBkLZt8awQr0spITdMr7Sy2oOJ+cis9kcvX6RHIinfwpBeJ+eB1ha3YChrOwvSTS81V6ZTWg5mhjnqhS7hatbeuVPPpJLeyDDS34/mmX5K8Q1H5ow4z9A2LBm669bOtns96CU/aeU4lQN+2uVGepJKbmao55qM2TH1kmH1uuFiG4rRPprzJVZqwzu2oY5r+FTbF3qp99mXDU/Goe3ZTaYcZWn1fHJV47C4laGaq+U/ZiO1YEg9bv4y33BvVnhD7K8JpQpe+MLEPE09tzGcTjS6Fw1pUU5qvxDf8OAv47pvuIck1HbCrJs3N+1T+9sZmpje9qilmIbHfv1PDdNZTNOfLPSlWRRav7B0mqQWDC88TvQMczUL2O+9ZLhTUbZ53aY6MVT1tnEpZaBWt1to2yZHLy4tVNG2XtaQvgibdZyLDFVU7a9sJ3sL/RWqbdGldcsXDNNpb1Fs9qrr0wfkjH57kNKAb+3H0HuL3I3pPUP1Tl4XRX357klBr54GxqKhqr/aHzJ3BzwVulNfytkf0mwiuojYCIpUSqK66kPLaX9oNsu+IW2fZHnDtYYbP2he3gFv7QFFHC8bRgdvl870EMqdfFy/s3G2/Y7gLBAszJnBJXt8zlgyxSjc+yWN3GsvnNN0ziHMkEX2nMZhy2zNGe/1LJg52eygKnvnRIfZGZeKnELWow6GLtjjp31VVdMYPoqrae9XSej71/KnKU5JM0anY7E6+6JCKr/gTZ/oA7RpDtxUsXNCZ2hylZr0TvWpSCf+bdQZ3XjHXw6VRVO8skLJR9akCV4vTD6zcPgKAAAAAAAAAAAAAAAAAAAAAAAAAAAA+Cb5D9oJHGcuZ4vLAAAAAElFTkSuQmCC>
+      <br />
+      <body3>
+        Going into my fourth-year of university, I had the pleasure of interning
+        at Microsoft as a Technical Program Manager.
+      </body3>
+      <br />
+      <br />
+
+      <body4>
+        At Microsoft, I worked with the Client Core team as a part of the Core
+        Operating System (OS) division which is all under the Azure Edge +
+        Platform organization. Here, I deciphered how to leverage AI to improve
+        products and user experiences, collaborated on a multitude of things
+        with software developers, data analysts, and other technical program
+        managers, conducted internal user research and market research, created
+        deliverables, and presented findings. Diving deeper, I worked very
+        closely with our data intelligence and AI teams in order to create both
+        supervised and unsupervised ML models to learn which inputs and signals
+        most directly pertain to different types of users.
+      </body4>
+      <br />
+      <br />
+      <br />
+      <img
+      src=data:image/png;base64,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>
+      <br />
+      <body3>
+        I started working at Motorola Solutions as a Technical Project Manager
+        going into my third-year as a summer intern. I continued to work
+        throughout the Fall, Winter, and Spring doing a Co-Op.
+      </body3>
+      <br />
+      <br />
+
+      <body4>
+        At Motorola Solutions I mainly worked with the Base Station Radio
+        Replacement (BSRR) team in collaboration with the New York Police
+        Department (NYPD) on a widely scaled project. The project reaches over
+        300 sites around the five boroughs and is $85 million in value. Also, I
+        visited sites and managed installation of equipment for FDNY and DoITT.
+        <br />
+        Specifically, I helped in creating deliverables, managed site
+        installations of both hardware and software, automated spreadsheets,
+        created statements of work, updated existing documentation and created
+        new documentation, partook in client meetings, and created slide decks.
+      </body4>
+      <br />
+      <br />
+      <br />
+
+      <img
+      src=https://media-exp1.licdn.com/dms/image/C560BAQEpT9vFvX2mIQ/company-logo_200_200/0/1563042618577?e=2147483647&v=beta&t=HlNX_TItRh1tZinjxTZ4yjg1Nf447-83EyXLPltknRk>
+      <br />
+      <body3>
+        I started working at Inspirit AI going into my sophomore year and
+        decided to continue throughout the entirety of my sophomore year, and
+        continued to work at Inspirit until August of 2022.
+      </body3>
+      <br />
+      <br />
+      <body5>
+        At Inspirit AI, I was a Technical Program Manager where I could be found
+        doing any of the following tasks: orchestrate the AI program in terms of
+        handling program execution, including organizing, hosting, and managing
+        Zoom sessions; sorting and leveling students based on their previous
+        computer science experience, matching students to their best fit AI
+        project, organizing materials and student-instructor matchings,
+        communicating with instructors, students, and families; working to build
+        a strong instructor community, streamlining processes and work with the
+        Curriculum team to design new AI programs, and collaborating with the
+        Growth team to support outreach and partnerships.
+        <br />
+        I managed hundreds of instructors who are either PhD students, software
+        engineers, undergraduates, or master's students and have also leveled,
+        sorted, and managed thousands of high school students.
+      </body5>
+      <br />
+      <br />
+      <img src=
+      data:image/png;base64,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>
+      <br />
+      <body6>
+        I have the pleasure of orchestrating the
+        <a href="https://www.percentageproject.org/">Percentage Project</a> at
+        Penn which is a data collection creating statistics from the input of
+        computer science and other engineering students through an anonymous
+        survey. These statistics then get taken and are overlaid onto photos of
+        engineers with the statistic present. Then, on launch day are spread all
+        over social media to raise awareness of the microaggressions faced by
+        engineers. I am tasked with spreading awareness, distributing emails and
+        campaign information, running the photoshoot, creating the survey, and
+        more!
+      </body6>
+      <br />
+      <br />
+      <br />
+      <img src=
+      data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUEAAACdCAMAAAAdWzrjAAABI1BMVEX///8dJ1iZGx4AAEgAAEoAAEcAEE3y8/cbJVfZ2+KNHCaVGh2ztsQAAEUAEU4VIVWqrbwADU0KGVEACkwRHVNMU3cGF1CBhZwAC0yIEyLm5+zU1d3t7vL4+PrIytUIGFGIj6QlLl2anKx3e5SdGhqusb8AAD8zPGjP0NlfZIMsNF+hpLUAADfAws1JETxBSHBxdZFTWXoAADxnbIhFTHGcEBCHi6BbYYAAADJjWXJ9ABJWH0Y6QmuRHCOOCxZIH0pPO2BkACNXEzxbADF8doxhABdgRmKZAABqZX9MADF5CyVECT5WR2hjKElQMVJvJj9+JTdNABVtACV+AAhfFzmLAAh1ABllLk10Y3lUK05UACBnT2p6GSxpDzFMQmJZJkYAACdNX6OxAAAgAElEQVR4nO19C4OrxpFuY0BAzBsEY15CMJKQOETSoEGJIztxNpvX+jjZdezc3Fzv7v//Fbe7eTUPjUZzZo7nOKeS45EQNN0f1dVV1VUFAC9JgpgNKEkcj3vRu7534l6EfNT07hdLVqtJakie7+3M/7HH/WzkvqFfgJY2btwJcpnCxCthismO9zyj6wa7S37kkT8XCezPnp+++HlYt68yFYIt03HZlOYpkzkKP8aAn50E9tNPnp1uWwTBUekjCCmg4FFTit73aF+CXhzB7GYEQeCdTHjQWL/n0b4ENQjefvnl7e0nt/fwTxeN21v4w33vaO8UeAY6D7XQR9CZjSEI/DniTfn4fkf7EoQRRAj9uih+89VnX/2msH/95f1tjdftl7/9tx/C3/37P9Pf/+EPYyBC4O7/7Y/RH//02Z//43fR13+Gl952EOTm/BiCQNAQshP7vY72JQgh+MXbt98UaITCHgl3v/jm7dsvMD6ffvlHwAXwB/j/dfj29rYLHvz3l7e/wisCV6SoOfHrt2//eksiCFbjCILQQhBK2fsZ58sRRPD2czVYlN8qjlCT9DOM0ddzB2RhXBRxBGH63X/+uYXw9suvfvuzT+5/6e/Ka7JSO+EK51ddBE8KRnCgRnMsglbZvuTo3gchBP89ESoE4/KP6gQIq9vfetnODjD3cIud64PgLw2Enxc+hPl+B7oIeiH45r6D4BQjyA9vvTMREzLBSw3tPRFE8MsC9BEUgA2h+jxtjiCK4Nf/rleU+18C8PX97a/BEMHkh/shgvPhrUUsCc3d8w/qvRLiwW+4AYLe7+F68A38GDntuVkIAvWvJYSfwyv+4/b2v8QhgsVnIzw4gqBjlKv0s4/p/RJC8NtsgKD4+SeffKvCj64I/+NUy0CWAu/n91gKfgsn389vESv2EfR/NTaLRxDkKB6vJR+4iYzW4s9HEPzsk9u3SPhn+zhS01AV7RB+VUUQ/IAk5N/WDprF4wjePg5BcMIIMh+4cYfX4lEE73P0894DzhRyoQCVHPg9dP3/hPP7H3jU4RfviKDyk0bw9lt0DGtrSWm/RiH8Gyf2Z7fflacH399+5MGHEIQSsFTi/G0tB12oMrp/v/02cf8PVB29t49HcKhRA48v5eBLDOs9EkLw+2CAYPb97e0/HGDO4cCT2PNLKL0c4hb/7f72+Jc/fJcC7u+393+sERRLvQ6uxb8eW0lGEBSw44unXmpo74mQPhgDQQS+FxQnfVsknA8WAtjd3kKMFLQS7+zf/98//TPy8OlwWodf3f+/20/+EEMevP85BxH0fSE98vNcdHzfD0H218chmGLvq963jJ1EXCwyd3SF9gQ3yZpZ77mZmIzKAB+eCFtpvrpiqmbO2JnvTogH/wkEgzdnjGyZlszoJi87/i9v73+DGQ/+53f3t7f33/0thl3wYwhk9o/vbr/7kwuS729/SMCBN03DmOk6bMA09RCkY/rgCIIbPIlplzzmRBtjuVxKkqF0ndhZuNuvKNPS6NqrmO1140Zj5HnodQZk54cNb05YzTDLe7prxdDkiWFtX8T8KfVB4EHiuOwUcBz6CMTPoXSEP/t2AsT/wkr07Xe/RQoNmrScahfw2f8ScuIvAYcv9Y62j6/1x/XBIYIii02SPXGIsxmWztMsU2Nd0+k9wV/TNxKj8EiDtDCCyYE2FXgA2ouWnnaalVgLPxseiSDgrFkdnwhtcHr/AptcSB/8LFb7FP/sk9vfq2JYcCD6qnF1fferiGtZJvweatT/Pbg0/Z9HrSQO1qd5hphbgSnLYXWeH8m8aZDQCOIGaz8YwZCZyJvDdq6ZuJGOJPDd2GoQzGTZoLbT1awUGdTzT2WE4Kc/+6xPP/sUmr6/gUpg9vXnhEvr9svf2tXkcvLv0Q/DSz/74pNHIMit8GFWbA9FtEK6GVyTp9gONA5mJYTgkTZs7IhLjgY6xhTd1nOzQjCimX2GGM+JZHRDZegjeld6yMv/6d+/efv9fc9lff/n//ljEdlf/3B/3mt9GcFgjsaoMIR3MGSoG5E8J2F4yuhAs1ZKBKfstuGlciuL7e784a0FqIPajKzWxxz8zPT8HcAapQf3SZDrfuTg/f139w/gN4YgpZDi3t0h36DCHAhBpzK82RudrUNoFsSBUEcYFHuWPDFCLh5l2rnSoRGCm5hRiHWqZGGms3I9A734TlOFIE9NQzFwnSRYxKsbk1Is40RynAMxZXuaiQPFGW8S0C+wMDONLtIHdAO6c62PVyleVzpHVXS5/tzeNIH94tNnpxEEKYaVpCX8n8TSUAcxpmGXF/YQ1EO/c3t4qUXM48qjuO+ehYGxQvIQVyKodR+Jz6C123waUGdJYKzJ85NGjKfiQTcQ1dS217uiSMWBvpwxtZpCUmR1JShGkJ/3FgOBHUzjEkFZ7J5YcuvNM9vhgp4Iz085wThnNer+2IyBwitOuoILIzgA2mMG2wgYwVIfJAkv0cPbvBsJ5qMdnN7jt9XiKxHEJrIx0NUwYu1qegZBDq/GdOfQOIJoaXoBBB+rIDmbzrr4IF2LIJqulBIXXQrX0JpQjMch2HHxvEoEHUqhGPXyeZiuRXCPz9msenTaQlq1hskHjaDDY50hvXwmoisRxHENPHVRnnzICApmpZM8DsIrEfQm2OC9aLN+wAgKsxJAiqcfFbF2LYJ4wPJPGEFX5qmamMdAeC2CNG75oqL2wSKYaKW/rYKwuHjB0xDU+grwgD5UBAMEIK/fyJaGPUT05Yi1axHEGAxtkj59oAhmyJo0zSJwPCE93MAvbHzhkqvXYszffdfMkD5MBDPkwpSPtYckQn3TLkF4rT6IDVZKu9TZDxJBEXHgjOCODMks7UIA9LUI4qFR7KWxfYgILsqukIcKZIHJD0N4LYIBXkrMS6z9ASKY4pEZHZeCjwOj5f25axBdiyDAbVL6BY3ww0MwLaMKeu6bMvbUeghCEsHTmTjqDqk4lnA2yoRc46V+nQjq5xGMmHKbtbsHUfqE4Ui250EhEcQb6/wlk22L1xJ2JFWM2zSXYi//YxD0H0LwmWPfBe0sgmGZ0EUpPZlX5tjAOXc4C2EeNh8dvEhQxoU0OlfCQG+8/g/ciWmO4fD/Wdg/Y4ggVtHPICg/1sH0SHKYQZ8rKioAB/sXiyrbkNJX5yBct3xS7m1cVpdLiaHMe93xVkS+RIy3SPtZPJWHlWTyBMvvWZ/v8fXdHZV3J086g2DBUjVZY3IQL56nMwy8b104ZV4dxa8u9SSkSwg7O1ACLxEsUy5K/a0iF8vQG3JyLrCz56Yv8XBqy+AJvCu9GRdQcQsgpXV80xzVuhnMPstUtGlM3HI1R5PnojmdahggyW7a5EKWJQAUSoEw6dnP5RPtSOtqj7q32AXlrNKeeSmRRnegY6MFsCdQbIv4SRkKLkRy2agX7OTmVPl4Kf7MpbALw6JidKYTFHO2Ffu+IJYqD1zXI4FrjmbHqj/6Pijbd7K1Xk2efXNL30lCpbpeD5PnDJ+Zj3lEco0iSScYX2Q7PynmSGe4cv87Rznu7Q4ovXxzyW5TN4zOwyEatCTRDG3EjZSY/uJOMqqWbqS7Nwz+pfjF3ZKubqExy7v/zUD6v+2hCTqEJ5AAT5Ru6p5IyzdjUclPpHxExOcTqkvWvma1UOO7PynU0K0nyPj0ZCH26KIi4QexKTHGjcEy0ikkc1n6TeGjbu8OCw84/UO4Eb9/+TPO5GjoETnKVJ8UxnY9z0nnMj/8aQBhsHmXHnFJkGXBhxOfng2iIPbWAEAkPBhDZob4oZ/M/mijn0Da8OPJedPVVfzDGIAYqTPHKZ7urUbrn0T6/2PJpzrWgn/QEVdZlnkWMAI6ZWbpCrLZuhaH8lOp4/E4IiwwZEPpFG+c4jCKV/01Y0CWsi6iYiqbUIkjJbNz956H8COTShht/smkTKXSb0TT7ACmdKUgLxXlAi3sDYrXiGVW7bkifurkSI3S4G0ggNNGLnIHEkJrrRoEhPysxSxiIZ6tXnl4ZGTDT4ao2mjz5nA+UoSRUeVtYUKemIjQpmnS1NvNKMqoIfTYF8p9ebUUVZPOQQVMut4ztVGtzRNizfCmmdIdmxP7rWsTdlE5EcLTdA9peqhpOp3mH3pG+yg5d5jtUHBWP+Pcr1UYZVPaV4293NsVKpAlWsUlTatJzAmxoSjmqbBLKvIpo908sZNe9uIqdvB0DWKK1DdBwckCPT/7uvRNtW672lXQ2xwIMHOyqCHnTfvTXqF00ifj58bTuugYjHQxpOHdaEqzT54gIoU8R2XCUNj9qdyGVJRWspXV3Piec9Uta0MhCG3CIFnIXQSB80QeDGVKOT3t0kdSAFfDyZMFOJO5JYADF3qMEOyabdjo4zc9BMvZzTOhT+51ZEYPQfBEey+lByH8z0yuxPP6OX/9RYpWletsEHmBXJW83DHa/CnebejeLKvdYdaB3BMIBgg+sY/+dDmwvp+ZwqX09B0Uv9VajA5veahCW9+ni9Tunt+6jJLH1LFOhgg+mZ7MHo8m7l2KjkSNP0vuOAXQ5hgzcOp5GwVOY/KI0Hhku9tSz4jga6fGj8DrxGRxoQZNjyyBHq9QckgcOCgND3dUgn8hBBdMw0TtZplL8Tw7Khsck+dvWm7dNQ4xs7u3/C+EIMFFvFZulnk2NIPPBe8LGoRwjbH2s1UDYCfhGvxrIegSJu+MOcTxgYFL7vm482TCUya9yeO1bjTgU5Owe1Yfwar8lOtmaRHjKgSiHYf9lSoo4jiOoghvc8BH6LjBIrJzLF6cJFPDGHcLnmaL/cRv0c7zQa1mIdrlsVo/XMFNxKiIcXNZbONuuEmWhjFeHT18B6yTJOFuFwr9tnJ4BzvCRO7kAJvYHOEVE2c/3DzAP0GZKKkrhL9moPT2ETxgKelPN5KssykKVFiytMxsyY6IChsGQaRp1oSVJAka2emBYi29jF0oTgz84YhKCixpVjP4zjqXMns1EHeSSWoKwlSJsiyipF1pLOUni5VnyMRx9oyu00cfuPsVK1sGtkmyg8lY+hL+elhqDCMzpJnmHZeHRSLuWcvSWJq+IxcJf9OyUkU3D8bziXT/fGqw99xD0GmyDFMZxa9MFVUQ1LmiGK2uYkulAeTMeT0Mi7K0JrK7a5+HwPNKDrW3SHCCvcwTQSH+sfoizKXWQFtIlY4bs02VBWgoaCJkAlTToqohCTXaxqSFIo0FmRQLjhDJvNbqyA5Pl+dEhjKNiqLoCC2X6fmk5QtxzSrdu4DMiW0QVPIkqEjdNAhCRdMsDuUwuZNiNqZKytTaU6BZrRB2mdZrtFeUo10FdMUznm/M8K1UX+CyTXmBhdToV1O9TveGzU2yyIjEcGVUbjofPrEaQVWmrJQutYrEoJia03xer0t27s1+ki4AHe8fJOuiARYxnQtGzC6IICW/qWmpazWCKA+sCWjPbpq8Tk9uJcFWsRrWdOgWwbVC6U0GmUFptbZQaK1jaW1WxqXDtP66zNArVcGDRjCV4zay2qF+UBoEFxO4JtZdjfWmS7bcRJwk7FiyfB0sUS4njzBDOxCOWZUQQTMGfklcsKcJBAkPI8NPKhgiubXMI6tV77sI8q2nY2fWRTQFhiiflMqVXnXU2+oePkNVugJEcFBrqYtgm9wianWlAsimTd4VHAA7tGHKGtElPRAcSBAR4DUaIdiXgxKBoNzOUYqvg+OmCtH1SQtyF0Ei/Cqy6lq4sU5EBia0guM6HI1c3RS+SrWFCGp9U6uLYBtMB6WbXK7HAkPEjU2VsWBYYVZLttIlfZnsxmk9mjnbX4uP4wjO+VlRf2qj2AKjDZnrIdhK6Miq4+Shkn+a1nTiKR4xDqrt1Ryc8tSsvClCcFhC4ByCVFWvITMIB/Rekcd05aBaX5XVYw35+uUPxmii01mN+hyCPLHpBzvcxAf1EGwtH4hgOSrHgKu7TxI6ujMhi/YPPhOCk9GEdRUvyAr1eE/IGhsk8rh792oEp8STXchnZ/EIgokxFt8L1+0xx+zTEBRYymqE6ok/k/6CgqdJl/RlQu5C68wO8dUIRnKbVLIzJ2dWkjMIjkQaH5TR6ptPQxBs+JtaDDkWz4wNDBK0hmdX+TJ9eOvpGal5NYKezst1u3OiSNZlBN2bsYwepPmMsMMTEUzpWaNmToyzFm+xvHJLh2MHpXZquhpBsGDrcOFoQtQxu4ygb4yVti5mo9kPT0QQ7LX6ecwfSkmKxrI6zpN/OK/4XI8gWNClQ01kyD39ywiiDYlhTS2kkI6I6Kci6O9YHPYM7ccH3yeg3l3BhV4/3pukEQRPuGvnEQSerRyK4nTXeQnRQ9pMhWDGjOXXQttHG07jpyIIxW1uxqFNKxcCW7LlowMABfkh94Oo9RHMyvSwBxAEXDyz1ayrDfQQbBeuFkFwMDvxTwGGSO3i6pefr0RwQjzMjJ+monBRW3aZi0nYVXtvHsQ6snqTyFPKr55OmlUm337x4jHd3GHaIe8VvtVQCp2y6nNMhWcaAZRRlS8LWmjN4/FXZdsIlR6C/olvugr18FYgwEXeaL6I8vqReoqzOT3mTPvuwdhyf4Mqp7YP0FHnTFUM3CD2pDy6TcBNZoexLB+0dV+BDK1Tvp2Y0Pho4rgF3uIrowOqRfUpOcNrecnRLl/9msoDu9gh9vTXJqEZhbN2Fz2/ZpWNlxcD753T6iGYk5BiZFnWloyBibm7kwwJDVctdE2W2X0Kn62/KHhDlulThNhHMJShMp+kNjORJ1KeOiCIDrQsG2aIK7ZHWxbeQC8qV7W/02R6Ey4WhUHUrF3MWY3ZqVk6LWuWOmoMm5OlXdqG/aWheQN7dICdcKI1bBTeLYJNCOFxeXNzs1xjb3QsXbVlsVheqEiRSQ87ELN0UOUWEm66+gUjmNZf0BPbWfyIh6c5BSJYNbNAYIj1cbWWS0401Rl6HnfMBV/cURprHNKqLnnTXDM7nOZQAIS62ynsiVO/OFNEX7TZdZs+wuYhFvPja/XGx9BBUQ7Zy2+uP40EGorUy4sISfb5NTngHyUor6WI4RWDmtovH+v2BPI3JjVjV8foimcc8PPRtDtvd/dCCQ82PeN5RddoehoGr40ZvS2jQMvHMlgzjx7JjL693A3XxpQ5vFigrxDqmjZTeEqxGCV/bfHEwVozZF3heVNmNo8MFxcOd70zA0V/wWBIYZeLWbHeMBOT53X6db3Ozo9ORaDGe5OxIIrn/QE9ymQy/9Pd30Uv92YlP6/YzncWuaUp/IhJ9uORSFXKPudGW8Y65xUdodRk1HIuB9ul/YKvwBa69Q3Fk269oqCRuFOS3gknvPFoSe0vZCYWvIhahi/JE95gi3pqvZ7Xy4Zvej6rwLqqwHqQM3fTxcu+Ga0YRJsL0qtJn/Asvj/6nXQdP3Evrlxsb/rLm//mmWubPJ0EetKXX8XjS1G/J9oPKl9kzKvpo0APNumn4Y/RkYcopZVVxxjxXlJvupY2yqS7rKUXK8C8f5paCh03yr6/YB5dQ/w9UEDz1qz15wjrl03PeBr5R9a0mFVup2larJnt67KOA31iTuQt6l20O7GvNIM1WPMMS7PSUprvXl+mfDqVaYaWlktz/2pWuCF5grhYLALn1SwhHfKEbCEGzgtaFR/pI32kj/SR/oXp3exe70Ncnp5xvffF4yHfHQ5FwGXYkMrCKmsnVEfU2v2h69YR8v1uvYoz5EgRoprEka3fxIU0tgGSRYT65wfovATSQG9w0ny63R5TwiuS1Ce7YzygRnVfi/0iw6eVZ4ui3ZYWSqLjdDuNiWyotg9u3Yey90nZUSFpPgIUzLArA4JSqMtiS8p3qYmUOo6wON3t+xi6UjdaRpzjM9Ilznx3pgYTO44TxMtj/8okXzIMuxjhV4v0mfvBXmJ0VUwLRduRbbhHKXI433dCqd1DSewlswyhoXC8Ow0MBc5iausrpO9OcRzbc1rawb+5ztblbxfzFXr5Mpes25eH+MFBYkwVGkdz6VhuNgS7O4aRqjeXCgfpjV3vS+dvGgPeO9W2aGRVUXAF008xLsxOWUznrhpkVB4NDD0sxzsZlpdY8YMoeoyC1I2x8swqvCiiiTiaYtnEInAnqUVrqpQ5986JPvX4UGSbNI2w+m1tVpUk05IHvW27qxuw83YfXq/6IDJs5VNQmTYmNls2HcuXxJNzagTFSR0oPDV7Rau3IhkdCYqmknGJoEdXCIJUG3hxY320+rBdWN3Y+LlZBWgVFlu3sZOIaGP/1NbmiKyq3rU303sByevQqmOWiqqdBkGAudOZS8TWbcBozdRs+rCY1FnCud5EQMWN+zxiO06GsDo3MGoEM+2m4yNJbN8ky5cfGgTLtw9zbI2gr+t9L31hjdUQ9ymwMjtBjae6945cv+81ZMiXeAKBaaZcKtcVwyOrO2G4FeDr65vwuQZBzG6r7ksGwknz4rxN3QewVaoYO45StLITDlOPw2PYzj2FihVcukZQ0LpBgFAQHE25/X7qzfIWQbA3++XkC2s2gmAQg2LWqTa1rZnJnyulH05ge7VcdnodoNUimPROEkNg672q5S2CiMJJ942r8KnXHNUiCNuoThKZ6oFMmzlcWL2g9Op2SYvgTbdXKx+IGpHRk+vzzn4BgeDR1B+F4C4ArtGZxg2CXB0nl5u9ejCuUee2tQgKTLevcBVMDK3rSOkgCAVub9u30GsR1SIIRUEtSvYmZpisucrfmOMpiC2CqtzZ+E5iVPieqI4kMopJBksRCJ6UfjLCOIIo01DpDKVBUJDLqHlPV3o+YX/DV/KjRTC70cjn4K0QE5td2dhBcKH1kyjgQliNrUUwN5tMEsdSTB/4GhHkeqbMeovgVu5IqBhJ2qNJvKDvZPIGERzSIijQk/5+7yiCwQ7/Qr4td2tWeOZM+QqFzOiXtALHOretRXCtz0hZKaKOxHr3vQodBNdmPz+Oa9LnGgQ9xWr3YVPUkbiFXZXPlMyHCJaLUrzshGn5mKsWGiH8HEWndL5RXBoEuZMxyM8bRXCH2nIZslTL1sQRpdzublc2EVqDRLZYr65I5SruOWO7+hNO5AvYSWcadxCU+7UhUJAsWz6FBsEduyE6vTWtkCgWE51H0IqyLEvn8+5mRYA5gVPI/FpuTfM8k1docayyTzzOjRjZHthNYwj65UJ3MolpulXmth0faLl+ULYu93dNbL3aPktlRoAmmlMw0472xJUyZNYVVB0EpcG7Gv1VHY69wfPAd49aZxyCxZPZ/FCVOoegGUf2aWkeuvqbvY7UxULd8J333aKSo1aVeI4QjGzbDsfi7MYQDI4etGG8nUmsxpAHoUWUhApTGR+2PsibIxBUVtOVyWo9kS7ucMNHsxOe0UOw/woJiGA1+za8sl9TMnvTswGmCvm25FRuo+2F/LDdbk/bEH2pZrGomVTnFrN1voY0VbrJQt7R4M1NTx8coTEEbUNGpPPEw6xmMfCPRimoitkIgpUMxzwIhKkld7d01xpu2OQ7eZgdBA1qMItXfCUTylks6orVFZVTk1wfM4N8/TR3Muvc7HolUQ2zU4ysFqlMP00+pSkNI3A1grqAWMXx5kq7ZG2bKb01sYoraoP0qNysLESIIB7zXu+8FJObO5gHnU1nNe4guFf6ZpNv1dOrukyYKd2Z3kXQm1CkRhlZdaJFsxbnOhmMsasfx07vv4Mm00p941oEg3ruhcRq3CKYafhZOXJfcYO6klS2VSPIUTxNDEasOdKekRB0EEzlPmu7TF25qQZeZLr6UBdBqJeQEeqqXGfVNQj6itIqP35rWLP1atwgYutYOb8WwV0tDgRiNW4R9Ojy1cZTs3elc1OvEDWCIGNImJuU+oQhV+MOgs6kV+kKrq1sxUTtWjzrFH/qISiwPJFAGhhVlRA4a2p9UDTaMh5BM3W5xt5s1LSExYrUlQj6VvORWI1bBAFb1vRLekoJZNma4RoEwc5qNWquHWenEEnXqostptuh1kBvEIR2Ealm9hBEBnvbfNIi2Phm4DxuXqYet8tHbrLlhyZHS6Dx43w8gglW11oeCK1GotQrCcqpq16vHdMdo8RrfE4EgtCKbtZdsV1W4OxouaSLoK93X9+zMJqKJK34zGidCG3sIwgKpq2SkGk1gqnc+HE4s36Ri088r0yrTrir3UGLMg/KYQZRTi3FOoEgxi5vdWC3tcA3jQ0HJVXV3LGTU3SkW/eS1QCUtfywbb3ewQ2hjq/NG1KCuxpDuMcdpQ3W2bQiYa0zbTcHCIKFLk3rWWDWzeVma0WJdFX8w5bbe7u1zJEqjcqzqpJKsnL+BSUbwgZw0XP1yDdFmUq1PHEKX+WHOabcGDY5ERW/u2uNvNxsEw3hPC6FqUu8PozjCaN6q9x0llaBePm0t2Fbb7PJU81nhW+cXsho6Q+Lizb0Xs0Ccc/eLDGCQc7oOpPXD2d3oykRCKbMTSOdFytLNw4oqpWJTkXiCWnJP45N67oxPRO2lkq6fFrgIlJiJMGnLZwI/2bC6EyM4PILRqdjx/cFlTbylmlV5liOwz2ZInHZTG6qk/hzWUJ+ymQutUqgaOh0bVekjM7GHTWC27FVdL1KTxswfRv2pqhPFCVZqSRYCI+Hw00qIQvjOA7TzC39zA6mtmwTJNA5VJ6AQtXQa6lEO642f7jyh/H42CJGtb3jmjyoxMOvNWMtduhHuDR7cYxP2+12hdhpyVf309jOT0dCRQ5xo42alcR2bIMMthXX0jvCze1cjEv5ubt6CMVpDW93itv5XPehhgpaWTv00Jzq+GtLF7qCfI57p6Kz55t9ncFOH+kjfaSP9JE+Ukn+YjzN8vJ7EJ+dXsOS6ajku4QWSaDaF9WbRWkYZvt0QVYYFodpW954W+5VCV7cuYQrT3TT0TDw8cB/tz2c7hdZ+jg1brStaE14Eok8AwcjY18MnM8qAO44aNO3lwfDyjTF+LZBapwDZYzUc6Y1sgbGbuCPlvW2psYAAAViSURBVPwLHbExBP2lD62zR3XCHGtLJLcsiXCsciPOv/hsamZDYS+7dgg9BIdbSzX5QU762B7Keo0eGmU/tOhB4o6ws8035I+NL6WBeGfrH2Skm7VFUGgjFvwg84GwAGUEYZIJwM8Ef8GBAFm/JIJKgE9HrycNYkHF1lKGXh8cWmLiL1DjWRL4ICAqTiQe3uaHRxzYZL5BPyUJlKLOwnNVrryrtwiQ8asGQMSNoHcnuSIQCSs7LF9UwgUZencsyPBGaRagjnMLR8ClzxNRXZQzbpWhG1YmnASHccqAgy4NRHyLIEjgeIIMvXSWC2A3/FOeeS4234IMfhWrJgkEMyQD925QBfGJjc+CCwGY+j6jeirkKygY4wCkU9F2AiFZEQhm2Rr12tlDZhFBAE36vQoc+LDDDHDIk2dHwIctRELkgfaJR763hF2J4F32AXARmrkLBNjKHt5iLnppDpcrbgdlHJppEWxh74HMBr6kchExp4s3kH+9EPhT4EkiBxsUUqDCjsM77wVnDm+qArXi8ewXKeDq/e5lIIQRwhyKZIcV0xTEqIINchHnDuyGL8gOuiMAmgcWkBf3Dij2jlOVvK4QDAQXjvIYAaGsjSNiHhR3KUhtN1knQEfhFEBYCW4aAbGao7APDYKCc0KPCPlaOQ3PYmcOcvRtBjjknIoiEOEVOpq209GPRRW9CjCNsNB1YW/QP3DMAHogGw9wDFpl0R1Rz6AcXKCxrByg+cAha4EGkx0oYGf3DkLN2wBHR7db4TuDqQCODuDK0boLgcmaoC3J8RAXBvBSn0N71CiABc6eveDaGR5CGIIAYQ9lKnp7fZajpwGqFaSdxVBMolls4wlfhk/6kgNyvML5M7TfB5Ly7AW6hbdwNw45i70lvGaVIAe9jz3MOkA5mT7dIFhtfaRGw4Mo8jdYdRDELUKmqBD0IBxZFrYI4ji8fQLkHoLwTK6MKoWgA2eD9jkhK8O/EbzdQUBxKW7JtCskphqRK2EhXSbccij4DAeFgLRkE4QgfH4Vgj5yAborkC76CHpqMCsRTMubFFOMmwfUnEDQKV2p2FEOeXkLuTtuEAQqXJUKOD5nhjfakh1A71XwVuVGFBxHiNt2UEsVIW+UD6fnAnYwT+CYkWsQHju4YA1l3wojCOc0ug3KMl7Y5eoP0UQItssgUhrWfoh745cIQk6PBQJBPwzSckVD7uIFW3uySgRPJfjovW8J7l6yaRCEg8KzGPIgivNQwyGCHrzBvESw9pVGuetlv/DQC8mdzHPgTV2IkgpZOwAh8pgXtriBE7MchHCHOQMOYCd4sN/JlnMiVDRMcGIXve4vADmUXdNUEH1bcOCQcNyGi13vcxtwG1Xcwgt40YW987IIv+fTMwKQLTlvk4UnyEM2vDMSrIEXLYDDwMcHn3BaesTXrgdFl79PnYAT4NTJGB+K9tR3oIq1RvCr5fYLJpFOxSCtXKPiHXYhOqtMgGPE2ylx7MDJUeygrIcKBoc2wx24xqFXMAiFJ6BRwn9Vzb3YDLIgdIo426RgnXrt+uYLSVC+jwEuWhzUhzkkLjzkS/U8HFvOQWUHyxB0BJ3qO/h0Hx8oH3H5zRe4UqNGX318bopYqbwK/eI7PtKWfeSbxY2ho+gfagj+gppxvKoRfAHn49+cLRbcvic49f04dAnsF1d9rlrK7SZbwEOfKnevV6v66HvlDXQED1RjzbNSi4d9wmMqe8/B9bgeoVc6mCEccHZVeLwPEp4rT33Esz5Onh2v5teo75jy11UdiKBrKoo8RGc2DoYkYLFxdaGa/PXlM/9YlKCIQ+Hq/PjDK6rp8GNTtgtH8qkuEJc8ZbL8fyl4EufP3AKqAAAAAElFTkSuQmCC
+      >
+      <br />
+      <body6>
+        I created the robotics and Arduino curriculum and then executed teaching
+        it at the four week summer program in coalition with Penn's GRASP Lab.
+        Unite - Summer Mentorship Program (SMP) is an engineering summer program
+        for high school students who are either an underrepresented minority,
+        female, ESL, Free or Reduced Lunch, 1st Generation College Bound, and/or
+        Receive Special Education. I served as the lead instructor along with
+        another Master's student at Penn and we had two Master's students as our
+        assistants.
+      </body6>
+      <br />
+      <br />
+      <a
+        href="https://lh3.googleusercontent.com/HQoou_JO6f7BVVidjLSsMrG0AzCJRHfJxXVb55QpPW7AQqeIIiMgllbd1NGhdikuMQekO689lagfEuIsXsnbsNKXD0e1Qlvt70w-patm8zEbLoc5Cq0r4o6DQBnI8KYUEesHQ91IxQ=w2400?source=screenshot.guru"
+      >
+        <img
+          src="https://lh3.googleusercontent.com/HQoou_JO6f7BVVidjLSsMrG0AzCJRHfJxXVb55QpPW7AQqeIIiMgllbd1NGhdikuMQekO689lagfEuIsXsnbsNKXD0e1Qlvt70w-patm8zEbLoc5Cq0r4o6DQBnI8KYUEesHQ91IxQ=w438-h78-p-k"
+          width="30%"
+          height="50%"
+        />
+      </a>
+      <br />
+      <br />
+      <body7>
+        I wrote and received grants from the National Center for Women &
+        Informational Technology (NCWIT) totaling in $6,600 in order for girls
+        from Title I schools to gain exposure to STEM concepts and job
+        opportunities for women in the STEM workforce by learning about
+        Robotics, Scratch, MIT App Inventor, and the Internet of Things.
+        <br />
+        Going into my freshman year of college COVID hit, so we had to create a
+        different, more virtual approach. We came up with the idea of "Camp in a
+        Backpack" and held camp remote where the girls joined via Zoom and were
+        given a backpack including all of the necessary materials, technology,
+        and supplies in order to be successful throughout the week-long camp.
+      </body7>
+      <br />
+      <br />
+      <img
+        src="https://1000logos.net/wp-content/uploads/2021/04/Chick-fil-A-logo.png"
+        width="25%"
+        height="30%"
+      />
+      <br />
+      <body7>
+        I worked in every area of operation: catering, marketing, drive-thru,
+        and frontline. I gained a variety of experiences, which include, but are
+        not limited to: teamwork, time management, and customer service, while
+        building a strong work ethic in a fast-paced environment.
+      </body7>
+    </div>
+    
+    <br>
+    
+    <br>
+    
+    <footer>&copy; 2024 Christa E. Simaan. All Rights Reserved.</footer>
+  </body>
 </html>
