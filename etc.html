@@ -9,6 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/style.css" />
@@ -38,6 +44,7 @@
       }
 
       nav {
+        font-size: 1.1em;
         margin-top: 15px;
         background-color: #007bbd;
         padding: 15px 0;
@@ -50,18 +57,12 @@
         margin: 0 15px;
         font-weight: bold;
         transition: color 0.3s ease;
+        align-items: center;
       }
 
-      nav a:visited nav a.active {
-        color: #fff;
-      }
-      nav a.active {
-        text-decoration: underline;
-        color: gray;
-      }
       nav a:hover {
-        color: #fff;
-        text-decoration: underline;
+        font-weight: bold;
+        color: #333;
       }
 
       .content {
@@ -94,13 +95,39 @@
       }
 
       footer {
+        padding: 20px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
         text-align: center;
-        padding: 20px 0;
         background-color: #00a2e8;
         color: #fff;
         position: fixed;
         width: 100%;
         bottom: 0;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        transition: color 0.3s ease;
+        font-size: 1em;
+      }
+
+      footer a:hover {
+        color: #333; 
+      }
+
+      footer i {
+        margin-right: 8px;
       }
     </style>
   </head>
@@ -117,7 +144,6 @@
         <a href="research.html">Research</a>
         <a href="projects.html">Projects</a>
         <a href="addt.html">Etc</a>
-        <a href="contact.html">Contact</a>
       </div>
     </nav>
 
@@ -215,6 +241,22 @@
 
     <br />
 
-    <footer>&copy; 2024 Christa E. Simaan. All Rights Reserved.</footer>
+    <footer>
+      <a href="mailto:cesimaan@gmail.com"
+        ><i class="fas fa-envelope"></i>Preferred Email</a
+      >
+      <a href="mailto:cesimaan@seas.upenn.edu"
+        ><i class="fas fa-envelope"></i>Additional Email</a
+      >
+      <a href="tel:+13368975565"
+        ><i class="fas fa-phone"></i>Cell: +1 (336) 897-5565</a
+      >
+      <a href="https://www.linkedin.com/in/christasimaan/"
+        ><i class="fab fa-linkedin"></i>LinkedIn</a
+      >
+      <a href="https://www.github.com/christasimaan"
+        ><i class="fab fa-github"></i>GitHub</a
+      >
+    </footer>
   </body>
 </html>
