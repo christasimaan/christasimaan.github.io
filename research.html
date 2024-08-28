@@ -10,6 +10,12 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
     <!-- External CSS -->
     <link rel="stylesheet" href="/style.css" />
 
@@ -38,6 +44,7 @@
       }
 
       nav {
+        font-size: 1.1em;
         margin-top: 15px;
         background-color: #007bbd;
         padding: 15px 0;
@@ -50,18 +57,12 @@
         margin: 0 15px;
         font-weight: bold;
         transition: color 0.3s ease;
+        align-items: center;
       }
 
-      nav a:visited nav a.active {
-        color: #fff;
-      }
-      nav a.active {
-        text-decoration: underline;
-        color: gray;
-      }
       nav a:hover {
-        color: #fff;
-        text-decoration: underline;
+        font-weight: bold;
+        color: #333;
       }
 
       .content {
@@ -94,13 +95,39 @@
       }
 
       footer {
+        padding: 15px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
         text-align: center;
-        padding: 20px 0;
         background-color: #00a2e8;
         color: #fff;
         position: fixed;
         width: 100%;
         bottom: 0;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        transition: color 0.3s ease;
+        font-size: 1em;
+      }
+
+      footer a:hover {
+        color: #333;
+      }
+
+      footer i {
+        margin-right: 8px;
       }
     </style>
   </head>
@@ -117,79 +144,92 @@
         <a href="research.html">Research</a>
         <a href="projects.html">Projects</a>
         <a href="addt.html">Etc</a>
-        <a href="contact.html">Contact</a>
       </div>
     </nav>
 
     <div class="content">
-
-    <img src =
-    https://jariwala.seas.upenn.edu/wp-content/uploads/2017/07/Penn-Engg.png
-    height = 50% width = 40%>
-    <br />
-    <body>
-      I conducted CIS research on the Formalization of Permutation Networks
-      through Penn Undergraduate Research Mentoring (PURM) Program and part of
-      the Deep Specification research team.
+      <img src =
+      https://jariwala.seas.upenn.edu/wp-content/uploads/2017/07/Penn-Engg.png
+      height = 50% width = 40%>
       <br />
-      Permutation Networks are circuits of configurable switches, such that
-      their output is always a permutation of the input. Our choice of
-      permutation network was the Benes network. In order to prove and work with
-      permutation networks, we used a proof-based programming language called
-      Coq. We created circuitry and we used abstraction in the creation to
-      simplify the composition to allow for ease in future use.
-      <br />
-      We had around 600 lines of definitions in Coq. We also had around 400
-      total lines of proofs, totaling to around 1,000 lines of code. This also
-      gave a 3:2 ratio of code to proofs. We attribute the proof size to
-      using dependent types and our use of Ltac proof automation.
-      <br />
-      Check out our Blog Post <a href="https://www.cis.upenn.edu/~plclub/blog/2021-09-10-permnets/"
-        >here!</a
-      >
-      <br />
-      More information on <a href="https://deepspec.org/page/Person">DeepSpec.</a>
-      <br />
-      A brief
-      <a
-        href="https://presentations.curf.upenn.edu/poster/formalization-permutation-networks"
-        >PURM Recap.</a
-      >
-    </body>
-    <br />
-    <br />
-    <img
-      src="https://www.chatham.k12.nc.us/cms/lib/NC01911141/Centricity/Domain/1629/Gov%20Schl%20NC.png"
-      height="50%"
-      width="40%"
-    />
-    <br />
-    <body2>
-      I also conducted research for the first time on Pascal's Triangle at North
-      Carolina's Governor's School East over the summer. My group and I derived
-      recursive formulae for a pattern we founded called Consecutive Rows with
-      Even Middle Terms (CREMT). We then created a Python program to generate
-      and predict the total percentage of even numbers per row compared to every
-      row before that.
-      <br />
-      We created a different program where odds were represented by a 1 and
-      evens were 0. We correlated this convetion to the triangle row and
-      generated 1’s and 0’s back. With this formula, we found that every row
-      after a CREMT contains all odd numbers. This was the reason for an
-      exponential growth of even values and exponential decay of odd values
-      throughout the whole, infinite triangle.
-      <br />
-      We had many other findings as well! Some of which can be found
-      <a href="https://www.icloud.com/iclouddrive/04fW56eqXSfvu5qKYzaXntIrQ"
-        >here.</a
-      >
-    </body2>
+      <body>
+        I conducted CIS research on the Formalization of Permutation Networks
+        through Penn Undergraduate Research Mentoring (PURM) Program and part of
+        the Deep Specification research team.
+        <br />
+        Permutation Networks are circuits of configurable switches, such that
+        their output is always a permutation of the input. Our choice of
+        permutation network was the Benes network. In order to prove and work
+        with permutation networks, we used a proof-based programming language
+        called Coq. We created circuitry and we used abstraction in the creation
+        to simplify the composition to allow for ease in future use.
+        <br />
+        We had around 600 lines of definitions in Coq. We also had around 400
+        total lines of proofs, totaling to around 1,000 lines of code. This also
+        gave a 3:2 ratio of code to proofs. We attribute the proof size to using
+        dependent types and our use of Ltac proof automation.
+        <br />
+        Check out our Blog Post
+        <a href="https://www.cis.upenn.edu/~plclub/blog/2021-09-10-permnets/"
+          >here!</a
+        >
+        <br />
+        More information on
+        <a href="https://deepspec.org/page/Person">DeepSpec.</a>
+        <br />
+        A brief
+        <a
+          href="https://presentations.curf.upenn.edu/poster/formalization-permutation-networks"
+          >PURM Recap.</a
+        >
+      </body>
+      <img
+        src="https://yt3.googleusercontent.com/5_5WZC0CpPTCLCedz7Zvd8tomW0CcoBe_QBHQG_f9jobjymaN--bKKyb8UxobjwSC74yYvZIYw=s900-c-k-c0x00ffffff-no-rj"
+        height="5%"
+        width="30%"
+      />
+      <body2>
+        I also conducted research for the first time on Pascal's Triangle at
+        North Carolina's Governor's School East over the summer. My group and I
+        derived recursive formulae for a pattern we founded called Consecutive
+        Rows with Even Middle Terms (CREMT). We then created a Python program to
+        generate and predict the total percentage of even numbers per row
+        compared to every row before that.
+        <br />
+        We created a different program where odds were represented by a 1 and
+        evens were 0. We correlated this convetion to the triangle row and
+        generated 1’s and 0’s back. With this formula, we found that every row
+        after a CREMT contains all odd numbers. This was the reason for an
+        exponential growth of even values and exponential decay of odd values
+        throughout the whole, infinite triangle.
+        <br />
+        We had many other findings as well! Some of which can be found
+        <a href="https://www.icloud.com/iclouddrive/04fW56eqXSfvu5qKYzaXntIrQ"
+          >here.</a
+        >
+      </body2>
     </div>
-    
-    <br>
-    
-    <br>
-    
-    <footer>&copy; 2024 Christa E. Simaan. All Rights Reserved.</footer>
+
+    <br />
+
+    <br />
+
+    <footer>
+      <a href="mailto:cesimaan@gmail.com"
+        ><i class="fas fa-envelope"></i>Preferred Email</a
+      >
+      <a href="mailto:cesimaan@seas.upenn.edu"
+        ><i class="fas fa-envelope"></i>Additional Email</a
+      >
+      <a href="tel:+13368975565"
+        ><i class="fas fa-phone"></i>Cell: +1 (336) 897-5565</a
+      >
+      <a href="https://www.linkedin.com/in/christasimaan/"
+        ><i class="fab fa-linkedin"></i>LinkedIn</a
+      >
+      <a href="https://www.github.com/christasimaan"
+        ><i class="fab fa-github"></i>GitHub</a
+      >
+    </footer>
   </body>
 </html>
