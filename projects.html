@@ -1,235 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style>
-      a {
-        color: black;
-      }
-    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js"></script>
+
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
 
-    <b>
-      <h1 style="background-color: LightBlue">Projects</h1>
-    </b>
-    <h2 style="background-color: LightBlue">
-      <div class="topnav">
-        <a href="index.html">About</a> &nbsp
-        <a href="experience.html">Experience</a> &nbsp
-        <a href="etc.html">A Day in the Life</a> &nbsp
-        <a href="research.html">Research</a> &nbsp
-        <a href="addt.html">Etc</a> &nbsp
-        <a href="contact.html">Contact</a> &nbsp
-      </div>
-    </h2>
-    <body>
-      <h2>Current Projects</h2>
-      <h3 style="background-color: LightBlue">Senior Design</h3>
-      For my senior design project, I am working with four others to combat
-      mental health crises. We are currently working to use NLP tools to analyze
-      Reddit data from global universities’ subreddit forums, focusing on
-      keywords pertaining to mental health and loneliness. We will leverage this
-      data to examine the relationship between mental health and the respective
-      university to analyze the changes in sentiment of posts pertaining to
-      mental wellness before, during, and after the Covid-19 pandemic. Informed
-      by our analysis, we will build a university-specific administrative
-      dashboard that can offer universities an overview of students’ mental
-      health status throughout the year. We will gather data that pertains
-      specifically to each school, such as sentiment surrounding different
-      classes, campus activities, and mental health resources.
-      <br />
-      <h2>Past Projects</h2>
-      <h3 style="background-color: LightBlue">PennOS</h3>
-      This is my very own UNIX-like operating system, built in C. This includes
-      programming a basic priority scheduler, FAT file system, and user shell
-      interactions. We made both our own rendition of a UNIX-like operating
-      system, PennOS, and another single standalone program, separate from the
-      final PennOS executable, pennfat. Once PennOS is booted, it executes a
-      shell which has many of its own built-in functions. There is no physical
-      hardware involved, instead PennOS runs as a guest operating system, within
-      a single process running on a host operating system. We accomplished the
-      above with the use of a multitude of files.
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/style.css" />
 
-      <h3 style="background-color: LightBlue">
-        Children's Hospital of Philadelphia Refrigerator Workflow Redesign
-      </h3>
-      There were issues with the workflow and organization of human milk and
-      formula in refrigerators and freezers at Children's Hospital of
-      Philadelphia (CHOP). These problems included, but are not limited to:
-      spills in the refrigerators and when pouring freshly pumped milk into
-      storage containers, space constraints for bottles in the refrigerator,
-      labeling issues, and workflow and process variability across CHOP. These
-      issues impacted the workload of the nurses, which in turn has the
-      potential to limit the quality of patient care. The purpose of our project
-      was to explore root causes of these issues and identify potential
-      solutions. After tons of user research, direct observations, and clinical
-      research, we landed on a few different prototypes. First, we were inspired
-      by the efficiency and simplicity of egg trays in refrigerators, we
-      proposed a fridge storage tray solution to facilitate human milk and
-      formula storage in hospital settings, while increasing space available and
-      decreasing the mental workload for nurses at CHOP. We mocked-up and then
-      3D printed the fridge storage tray below. The prototype mimics egg trays’
-      segmented layout, offering modular compartments that facilitate organized
-      storage. Each compartment is designed for easy access and a first-in,
-      first-out (FIFO) arrangement, optimizing space and ensuring the use of
-      milk before expiration. This solution optimizes the use of space and makes
-      human milk storage much more compact than before. We recognized that the
-      initial egg tray-inspired prototype still lacked space efficiency and
-      adaptability with existing organizational processes. More specifically,
-      the overwhelming consensus from nurses we spoke with and sent our
-      questionnaire to was that space constraints were a major problem, and we
-      wanted to tackle this more directly with our solution. To address these
-      shortcomings, we looked towards lab storage designs for inspiration,
-      leading to a modular approach that integrates seamlessly with nurses’
-      existing workflows. Our new prototype allows milk bottles to be stackable,
-      significantly reducing the space constraint, and also allows bottles to be
-      accessed easily. Our redesign was mainly focused around space efficiency,
-      modularity, ease of use, and workflow simplifications. For space
-      efficiency, the new prototype prioritizes a compact design to maximize
-      storage capacity in existing refrigeration units. It is the height of the
-      shelves in the chop fridges which are about 7-8 rack units, and easily is
-      able to be placed on a rack within the fridges. It is very modular, as
-      there are inserts to be adaptable based on varying storage needs. It is
-      easy to use as we ensure trays are user-friendly, easily replaceable, and
-      compatible with the current practices within CHOP fridges. Last, but not
-      least the modular design aligns with nurses’ routines, allowing for
-      quicker and error-free access to milk containers. Additionally, due to
-      their size, nurses will be able to use more racks as needed, they are easy
-      to replace if they break, and can have dividers put into sections off the
-      tray. This could be by date pumped, date of expiration, patient, etc. This
-      redesigned prototype represents a significant improvement, harmonizing
-      with the dynamic environment of human milk and formula storage and
-      simplifying management for the nursing staff.
+    <!-- Custom Styles -->
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
 
-      <br />
-      <h3 style="background-color: LightBlue">FlavorFinder</h3>
-      FlavorFinder is designed to help alleviate the pain point of having
-      certain ingredients and not knowing what to do with them either before
-      they go bad as well as inspiring creativity in the kitchen. This project
-      is designed to create and make an interactive interface that helps users
-      select a recipe based on desired ingredients, ingredient quantities,
-      nutritional value, prep time, cook time, recipe reviews, and so much more!
-      This was done using SQL, JavaScript, Python, and more.
-      <br />
-      Our application has many different forms of functionality. To start, the
-      website opens with a log-in/sign-up page that allows new users to sign-up
-      and existing users to log-in to their account. The log-in/sign-up formal
-      is followed by a home/recipes page that consists of a featured recipe and
-      a top recipes table. Then, there is a search page where users can type in
-      a name or description of a recipe they are looking for and use sliders to
-      check on the time, content, recipe yield, ingredients, etc. The website
-      then uses these search parameters to query the dataset and display the
-      query result of the recipes that meet all the inputted preferences. Each
-      individual recipe links to a page that displays all information about that
-      recipe, including the ingredients list, prep time, cook time,
-      instructions, nutrition facts, reviews, and more. This is followed by
-      similar logic, but into a reviews page. The reviews page has a search bar
-      as well to look for certain authors, reviews, or ratings. Lastly, there is
-      also a Likes page which shows the recipes that a user has liked and saves
-      them for the user to have easy access to.
-      <br />
-      We found the overarching dataset we used here on Kaggle. The dataset had
-      two .csv files in it, one being Recipes which is found here and the other
-      Reviews which are found here. The Recipes’ table is 716.4 MB. There were
-      522,569 rows before cleaning and after cleaning there were 28,013 rows and
-      30 columns. The Reviews’ table is 504.9 MB. There were 1,401,982 rows
-      before cleaning and after cleaning there were 1,401,768 rows and 8
-      columns.
-      <br />
-      Check out our GitHub Repo
-      <a href="https://github.com/christasimaan/CIS550Project">here!</a>
-      <br />
+      header {
+        background-color: #00a2e8;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
 
-      <h3 style="background-color: LightBlue">Climate Change Predictor</h3>
-      We used an Earth Surface Temperature dataset, as well as two additional
-      .csv files on both greenhouse gases and natural disaster rates in order to
-      analyze information about the varying surface temperatures on Earth (and
-      many of the possible consequences of such actions). This was done in a
-      Jupyter Notebook using pandas, python, and machine learning techniques,
-      SARIMA.
-      <br />
-      This project is rather interesting because climate change has been more
-      and more of an increasing issue. We dove into how it has and will continue
-      to affect countries, major cities, and states. The overall structure of
-      our process was as follows: Data Wrangling of the State, City, and Country
-      tables Exploratory Data Analysis (EDA) and Visualization of the Average
-      Temperatures using machine learning to make temperature predictions
-      connection to natural disasters. We use different techniques and figures
-      to represent the interconnection and correlations between these surface
-      temperatures with various possible atrocities so that we could see for
-      ourselves the trends. This is a topic that often has misinformation and we
-      have seen through working with the data that there are many exceptions
-      from the overall trends that can be cherry picked in order to demonstrate
-      certain narratives.
-      <br />
-      As a synopsis, we did data analysis pulling in four different .csv with
-      around 700,000 rows of information in each. Then, we analyzed climate
-      change over the years and calculated the predicted temperatures using
-      regression in 2050 for different states, countries, and major cities. We
-      also analyzed how climate change has an effect on natural disasters.
-      <br />
-      Our main challenge with the project above was that since data and
-      temperatures fluctuate depending on where one is located in the world as
-      the seasons are different, we were first using AutoRegressive Integrated
-      Moving Average (ARIMA) and then did not get predictions which seemed
-      correct. So, we used Seasonal AutoRegressive Integrated Moving Average
-      (SARIMA), which would give us seasonal information and data and then
-      successfully were able to predict the 2050 temperatures based on our data
-      sets.
-      <br />
-      The timeline in which we predict most of our models to span is until 2050.
-      We found that any further predictions would not reflect the state of the
-      world accurately. We hope you enjoy the cool, groundbreaking results from
-      this dataset and can potentially re-observe them in 2050 to see if the
-      temperature predictions held true.
-      <br />
-      Check out our GitHub Repo with our Jupyter Notebook
-      <a href="https://github.com/christasimaan/ClimateChange">here!</a>
-      <br />
+      header h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 3em;
+        margin: 0;
+      }
 
-      <h3 style="background-color: LightBlue">Latchless</h3>
-      Ideated, came-up with a product, completed assembly drawings, proof of
-      concepts, schematic design, and more for my product, Latchless! Latchless
-      is a portable contraption that lets you open and close your doors with
-      ease. This new and improved doorstop allows for one to fully close their
-      door all while making it latchless by successfully pushing the latch all
-      the way back. By “removing” the latch, the door essentially becomes a
-      swinging door and is thus able to open with just a nudge which is perfect
-      for when you have a bunch of things to carry in. By having this
-      contraption reside on your keys it is rather portable and it makes for
-      easy access and trips inside when doing laundry, grocery shopping,
-      moving-in, etc. It is very user-friendly and can be put on in seconds.
-      <br />
-      The prototype is an innovative and versatile product that combines four
-      distinct components to create a single solution for a common problem. We
-      utilized laser cut acrylic, stretchy elastic wrist band, key rings, and an
-      adjustable strap. The laser cut acrylic is ⅛’ in order to have the door
-      still be able to close, but strong enough to keep the latch back. The
-      stretchy elastic wrist band allows for it to also be universal and stretch
-      to size based on the width of the door handle from the latch. The key
-      ring, made of sturdy metal, allows for connecting the parts together. The
-      adjustable strap serves an essential purpose by allowing for the band to
-      be adjustable and thus universal for every door.
-      <br />
-      This prototype has several advantages, including its versatility and
-      durability, which make it an ideal solution for both personal and
-      professional use. Its unique design and ease of use make it an attractive
-      option for anyone looking for a practical and effective way to prevent
-      doors from closing or to keep keys organized. Overall, this innovative
-      prototype is a promising solution that has the potential to solve a common
-      problem in a convenient and effective way.
-      <br />
-      In our product design fair, this product was awarded $448,672 due to the
-      cost of production and the design fair tokens received (each attendee of
-      the design fair was given three tokens simulating a product vote/buy) and
-      received second place out of 43 different products at the fair.
-    </body>
+      nav {
+        margin-top: 15px;
+        background-color: #007bbd;
+        padding: 15px 0;
+        text-align: center;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      nav a:visited nav a.active {
+        color: #fff;
+      }
+      nav a.active {
+        text-decoration: underline;
+        color: gray;
+      }
+      nav a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .content {
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+        background: #fff;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+      }
+
+      .content img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 10px;
+      }
+
+      .content h2 {
+        font-family: "Playfair Display", serif;
+        text-align: center;
+        font-size: 2em;
+        margin-top: 0;
+      }
+
+      .content p {
+        font-size: 1.2em;
+        margin: 20px 0;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        background-color: #00a2e8;
+        color: #fff;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+    </style>
   </head>
+  <body>
+    <header>
+      <h1>Christa E. Simaan</h1>
+    </header>
+
+    <nav>
+      <div class="topnav">
+        <a href="index.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="etc.html">A Day in the Life</a>
+        <a href="research.html">Research</a>
+        <a href="projects.html">Projects</a>
+        <a href="addt.html">Etc</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <body>
+        <h2>Current Projects</h2>
+        <h3 style="background-color: LightBlue">Senior Design</h3>
+        For my senior design project, I am working with four others to combat
+        mental health crises. We are currently working to use NLP tools to
+        analyze Reddit data from global universities’ subreddit forums, focusing
+        on keywords pertaining to mental health and loneliness. We will leverage
+        this data to examine the relationship between mental health and the
+        respective university to analyze the changes in sentiment of posts
+        pertaining to mental wellness before, during, and after the Covid-19
+        pandemic. Informed by our analysis, we will build a university-specific
+        administrative dashboard that can offer universities an overview of
+        students’ mental health status throughout the year. We will gather data
+        that pertains specifically to each school, such as sentiment surrounding
+        different classes, campus activities, and mental health resources.
+        <br />
+        <h2>Past Projects</h2>
+        <h3 style="background-color: LightBlue">PennOS</h3>
+        This is my very own UNIX-like operating system, built in C. This
+        includes programming a basic priority scheduler, FAT file system, and
+        user shell interactions. We made both our own rendition of a UNIX-like
+        operating system, PennOS, and another single standalone program,
+        separate from the final PennOS executable, pennfat. Once PennOS is
+        booted, it executes a shell which has many of its own built-in
+        functions. There is no physical hardware involved, instead PennOS runs
+        as a guest operating system, within a single process running on a host
+        operating system. We accomplished the above with the use of a multitude
+        of files.
+
+        <h3 style="background-color: LightBlue">
+          Children's Hospital of Philadelphia Refrigerator Workflow Redesign
+        </h3>
+        There were issues with the workflow and organization of human milk and
+        formula in refrigerators and freezers at Children's Hospital of
+        Philadelphia (CHOP). These problems included, but are not limited to:
+        spills in the refrigerators and when pouring freshly pumped milk into
+        storage containers, space constraints for bottles in the refrigerator,
+        labeling issues, and workflow and process variability across CHOP. These
+        issues impacted the workload of the nurses, which in turn has the
+        potential to limit the quality of patient care. The purpose of our
+        project was to explore root causes of these issues and identify
+        potential solutions. After tons of user research, direct observations,
+        and clinical research, we landed on a few different prototypes. First,
+        we were inspired by the efficiency and simplicity of egg trays in
+        refrigerators, we proposed a fridge storage tray solution to facilitate
+        human milk and formula storage in hospital settings, while increasing
+        space available and decreasing the mental workload for nurses at CHOP.
+        We mocked-up and then 3D printed the fridge storage tray below. The
+        prototype mimics egg trays’ segmented layout, offering modular
+        compartments that facilitate organized storage. Each compartment is
+        designed for easy access and a first-in, first-out (FIFO) arrangement,
+        optimizing space and ensuring the use of milk before expiration. This
+        solution optimizes the use of space and makes human milk storage much
+        more compact than before. We recognized that the initial egg
+        tray-inspired prototype still lacked space efficiency and adaptability
+        with existing organizational processes. More specifically, the
+        overwhelming consensus from nurses we spoke with and sent our
+        questionnaire to was that space constraints were a major problem, and we
+        wanted to tackle this more directly with our solution. To address these
+        shortcomings, we looked towards lab storage designs for inspiration,
+        leading to a modular approach that integrates seamlessly with nurses’
+        existing workflows. Our new prototype allows milk bottles to be
+        stackable, significantly reducing the space constraint, and also allows
+        bottles to be accessed easily. Our redesign was mainly focused around
+        space efficiency, modularity, ease of use, and workflow simplifications.
+        For space efficiency, the new prototype prioritizes a compact design to
+        maximize storage capacity in existing refrigeration units. It is the
+        height of the shelves in the chop fridges which are about 7-8 rack
+        units, and easily is able to be placed on a rack within the fridges. It
+        is very modular, as there are inserts to be adaptable based on varying
+        storage needs. It is easy to use as we ensure trays are user-friendly,
+        easily replaceable, and compatible with the current practices within
+        CHOP fridges. Last, but not least the modular design aligns with nurses’
+        routines, allowing for quicker and error-free access to milk containers.
+        Additionally, due to their size, nurses will be able to use more racks
+        as needed, they are easy to replace if they break, and can have dividers
+        put into sections off the tray. This could be by date pumped, date of
+        expiration, patient, etc. This redesigned prototype represents a
+        significant improvement, harmonizing with the dynamic environment of
+        human milk and formula storage and simplifying management for the
+        nursing staff.
+
+        <br />
+        <h3 style="background-color: LightBlue">FlavorFinder</h3>
+        FlavorFinder is designed to help alleviate the pain point of having
+        certain ingredients and not knowing what to do with them either before
+        they go bad as well as inspiring creativity in the kitchen. This project
+        is designed to create and make an interactive interface that helps users
+        select a recipe based on desired ingredients, ingredient quantities,
+        nutritional value, prep time, cook time, recipe reviews, and so much
+        more! This was done using SQL, JavaScript, Python, and more.
+        <br />
+        Our application has many different forms of functionality. To start, the
+        website opens with a log-in/sign-up page that allows new users to
+        sign-up and existing users to log-in to their account. The
+        log-in/sign-up formal is followed by a home/recipes page that consists
+        of a featured recipe and a top recipes table. Then, there is a search
+        page where users can type in a name or description of a recipe they are
+        looking for and use sliders to check on the time, content, recipe yield,
+        ingredients, etc. The website then uses these search parameters to query
+        the dataset and display the query result of the recipes that meet all
+        the inputted preferences. Each individual recipe links to a page that
+        displays all information about that recipe, including the ingredients
+        list, prep time, cook time, instructions, nutrition facts, reviews, and
+        more. This is followed by similar logic, but into a reviews page. The
+        reviews page has a search bar as well to look for certain authors,
+        reviews, or ratings. Lastly, there is also a Likes page which shows the
+        recipes that a user has liked and saves them for the user to have easy
+        access to.
+        <br />
+        We found the overarching dataset we used here on Kaggle. The dataset had
+        two .csv files in it, one being Recipes which is found here and the
+        other Reviews which are found here. The Recipes’ table is 716.4 MB.
+        There were 522,569 rows before cleaning and after cleaning there were
+        28,013 rows and 30 columns. The Reviews’ table is 504.9 MB. There were
+        1,401,982 rows before cleaning and after cleaning there were 1,401,768
+        rows and 8 columns.
+        <br />
+        Check out our GitHub Repo
+        <a href="https://github.com/christasimaan/CIS550Project">here!</a>
+        <br />
+
+        <h3 style="background-color: LightBlue">Climate Change Predictor</h3>
+        We used an Earth Surface Temperature dataset, as well as two additional
+        .csv files on both greenhouse gases and natural disaster rates in order
+        to analyze information about the varying surface temperatures on Earth
+        (and many of the possible consequences of such actions). This was done
+        in a Jupyter Notebook using pandas, python, and machine learning
+        techniques, SARIMA.
+        <br />
+        This project is rather interesting because climate change has been more
+        and more of an increasing issue. We dove into how it has and will
+        continue to affect countries, major cities, and states. The overall
+        structure of our process was as follows: Data Wrangling of the State,
+        City, and Country tables Exploratory Data Analysis (EDA) and
+        Visualization of the Average Temperatures using machine learning to make
+        temperature predictions connection to natural disasters. We use
+        different techniques and figures to represent the interconnection and
+        correlations between these surface temperatures with various possible
+        atrocities so that we could see for ourselves the trends. This is a
+        topic that often has misinformation and we have seen through working
+        with the data that there are many exceptions from the overall trends
+        that can be cherry picked in order to demonstrate certain narratives.
+        <br />
+        As a synopsis, we did data analysis pulling in four different .csv with
+        around 700,000 rows of information in each. Then, we analyzed climate
+        change over the years and calculated the predicted temperatures using
+        regression in 2050 for different states, countries, and major cities. We
+        also analyzed how climate change has an effect on natural disasters.
+        <br />
+        Our main challenge with the project above was that since data and
+        temperatures fluctuate depending on where one is located in the world as
+        the seasons are different, we were first using AutoRegressive Integrated
+        Moving Average (ARIMA) and then did not get predictions which seemed
+        correct. So, we used Seasonal AutoRegressive Integrated Moving Average
+        (SARIMA), which would give us seasonal information and data and then
+        successfully were able to predict the 2050 temperatures based on our
+        data sets.
+        <br />
+        The timeline in which we predict most of our models to span is until
+        2050. We found that any further predictions would not reflect the state
+        of the world accurately. We hope you enjoy the cool, groundbreaking
+        results from this dataset and can potentially re-observe them in 2050 to
+        see if the temperature predictions held true.
+        <br />
+        Check out our GitHub Repo with our Jupyter Notebook
+        <a href="https://github.com/christasimaan/ClimateChange">here!</a>
+        <br />
+
+        <h3 style="background-color: LightBlue">Latchless</h3>
+        Ideated, came-up with a product, completed assembly drawings, proof of
+        concepts, schematic design, and more for my product, Latchless!
+        Latchless is a portable contraption that lets you open and close your
+        doors with ease. This new and improved doorstop allows for one to fully
+        close their door all while making it latchless by successfully pushing
+        the latch all the way back. By “removing” the latch, the door
+        essentially becomes a swinging door and is thus able to open with just a
+        nudge which is perfect for when you have a bunch of things to carry in.
+        By having this contraption reside on your keys it is rather portable and
+        it makes for easy access and trips inside when doing laundry, grocery
+        shopping, moving-in, etc. It is very user-friendly and can be put on in
+        seconds.
+        <br />
+        The prototype is an innovative and versatile product that combines four
+        distinct components to create a single solution for a common problem. We
+        utilized laser cut acrylic, stretchy elastic wrist band, key rings, and
+        an adjustable strap. The laser cut acrylic is ⅛’ in order to have the
+        door still be able to close, but strong enough to keep the latch back.
+        The stretchy elastic wrist band allows for it to also be universal and
+        stretch to size based on the width of the door handle from the latch.
+        The key ring, made of sturdy metal, allows for connecting the parts
+        together. The adjustable strap serves an essential purpose by allowing
+        for the band to be adjustable and thus universal for every door.
+        <br />
+        This prototype has several advantages, including its versatility and
+        durability, which make it an ideal solution for both personal and
+        professional use. Its unique design and ease of use make it an
+        attractive option for anyone looking for a practical and effective way
+        to prevent doors from closing or to keep keys organized. Overall, this
+        innovative prototype is a promising solution that has the potential to
+        solve a common problem in a convenient and effective way.
+        <br />
+        In our product design fair, this product was awarded $448,672 due to the
+        cost of production and the design fair tokens received (each attendee of
+        the design fair was given three tokens simulating a product vote/buy)
+        and received second place out of 43 different products at the fair.
+      </body>
+    </div>
+
+    <br />
+
+    <br />
+
+    <footer>&copy; 2024 Christa E. Simaan. All Rights Reserved.</footer>
+  </body>
 </html>
