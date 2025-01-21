@@ -43,6 +43,10 @@
         margin: 0;
       }
 
+      h4 {
+        margin-left: 40px;
+      }
+
       nav {
         font-size: 1.1em;
         margin-top: 15px;
@@ -156,36 +160,128 @@
 
     <div class="content">
       <body>
-        <h2>Penn Cloud</h2>
+        <h2>PennCloud</h2>
+        This is by far the hardest project I have ever been a part of. However,
+        it was very rewarding. PennCloud is the final project for the
+        CIS 5050 Software Systems course. Overall, it is meant to be a distributed cloud
+        platform that has features similar to that of Gmail and Google Drive.
+        <br />
+        <br />
+        I worked on the frontend component with one other person and two others
+        worked on the backend component. Divided into frontend and backend, we
+        implemented the following features to make up our Penn Cloud:
+        <h4>
+          Frontend Design
+          <ol>
+            <li>Load balancer</li>
+            <li>Web servers (Frontend servers)</li>
+            <ol type="a">
+              <li>Multithreading server</li>
+              <li>Handling the HTTP requests</li>
+              <li>Communication with the backend server</li>
+              <li>Sending HTTP responses</li>
+              <li>User account management</li>
+              <li>Cookie management</li>
+            </ol>
+            <li>HTML web pages</li>
+            <li>Webmail service</li>
+            <ol type="a">
+              <li>
+                Functionality includes: an email list, email content,
+                composition of emails, reply, forward, delete, SMTP client, and
+                SMTP server.
+              </li>
+            </ol>
+            <li>Web storage service</li>
+            <ol type="a">
+              <li>
+                Functionality includes: a list of all a user's items in their
+                directory, uploading files, downloading files, creating a new
+                folder, renaming a file or folder, deleting a file or folder,
+                and moving a file or folder.
+              </li>
+            </ol>
+            <li>Admin console</li>
+            <ol type="a">
+              <li>
+                Checks the node status for both frontend and backend and allow
+                for restarting/disabling the storage nodes and also displays the
+                raw KVS data is presented for all nodes.
+              </li>
+            </ol>
+          </ol>
+        </h4>
+        <h4>
+          Backend Design
+          <ol>
+            <li>Master Node (Backend Coordinator)</li>
+            <li>Key-value store</li>
+            <li>Tablets</li>
+            <ol type="a">
+              <li>
+                There exists a mutex for every row-key in the tablet. Tablets
+                are loaded in memory as needed. If memory is full, then a tablet
+                is evicted.
+              </li>
+            </ol>
+            <li>Replication</li>
+            <ol type="a">
+              <li>
+                Utilizes the primary-secondary replication model. There is one
+                primary server that synchronizes data writing and a replication
+                protocol to promote a secondary server in the case that the
+                primary server fails/crashes.
+              </li>
+            </ol>
+            <li>Recovery</li>
+            <ol type="a">
+              <li>Handles primary and secondary crashes.</li>
+            </ol>
+            <li>Admin console</li>
+          </ol>
+        </h4>
+
+        <br />
         <br />
         <br />
         <h2>Senior Design</h2>
         For my senior design project, I worked with four others to use NLP
-        models to combat the mental health crises. We analyzed Reddit data from
-        global universities’ subreddit forums, focused on keywords that
-        pertained to mental health and loneliness. We leveraged this data to
-        examine the relationship between mental health and the respective
-        university to analyze changes in sentiment of posts pertaining to mental
-        wellness before, during, and after the Covid-19 pandemic. Informed by
-        our analysis, we built a university-specific administrative dashboard
-        that can offer universities an overview of students’ mental health
-        status throughout the year. Our dashboard empowers wellness officials
-        with an easy-to-understand visualization of the data and facilitates a
-        positive change by providing insights into current sentiments and
-        trends.
-<br />
+        models to combat the mental health crises. The increased prevalence of
+        mental health challenges among higher education students demands further
+        research to develop effective support systems. Therefore, we analyzed
+        Reddit data from global universities’ subreddit forums, focusing on
+        keywords that pertained to mental health and loneliness. We leveraged
+        this data to examine the relationship between mental health and the
+        respective university to analyze changes in sentiment of posts
+        pertaining to mental wellness before, during, and after the COVID-19
+        pandemic.
+        <br />
+        <br />
+        Informed by our analysis, we built a university-specific administrative
+        dashboard that can offer universities an overview of students’ mental
+        health status throughout the year. Our dashboard empowers wellness
+        officials with an easy-to-understand visualization of the data and
+        facilitates a positive change by providing insights into current
+        sentiments and trends.
+        <br />
+        <br />
+        We recieved honorable mention for our project at the Penn Engineering
+        CIS Senior Design Fair.
+        <br />
+        <br />
         <br />
         <h2>PennOS</h2>
-        This is my very own UNIX-like operating system, built in C. This
-        includes programming a basic priority scheduler, FAT file system, and
-        user shell interactions. We made both our own rendition of a UNIX-like
-        operating system, PennOS, and another single standalone program,
-        separate from the final PennOS executable, pennfat. Once PennOS is
-        booted, it executes a shell which has many of its own built-in
-        functions. There is no physical hardware involved, instead PennOS runs
-        as a guest operating system, within a single process running on a host
-        operating system. We accomplished the above with the use of a multitude
-        of files.
+        I worked with three others to build our very own UNIX-like operating
+        system, built in C. This includes programming a basic priority
+        scheduler, FAT file system, and user shell interactions. We made both
+        our own rendition of a UNIX-like operating system, PennOS, and another
+        single standalone program, separate from the final PennOS executable,
+        pennfat. Once PennOS is booted, it executes a shell which has many of
+        its own built-in functions. There is no physical hardware involved,
+        instead PennOS runs as a guest operating system, within a single process
+        running on a host operating system. We accomplished the above with the
+        use of a multitude of files.
+        <br />
         <br />
         <br />
         <h2>
@@ -247,6 +343,7 @@
         for the nursing staff.
         <br />
         <br />
+        <br />
         <h2>FlavorFinder</h2>
         FlavorFinder is designed to help alleviate the pain point of having
         certain ingredients and not knowing what to do with them either before
@@ -291,6 +388,7 @@
           style="color: black"
           >here!</a
         >
+        <br />
         <br />
         <br />
         <h2>Climate Change Predictor</h2>
@@ -347,6 +445,7 @@
           style="color: black"
           >here!</a
         >
+        <br />
         <br />
         <br />
         <h2>Latchless</h2>
